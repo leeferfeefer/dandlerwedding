@@ -1,25 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { 
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import { Home } from "./routes/Home";
-import { RSVP } from "./routes/RSVP";
-import { Registry } from "./routes/Registry";
+import { Router } from "./Router";
+import './fonts/RocGrotesk.ttf';
+import './fonts/Curvilingus.otf';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="rsvp" element={<RSVP />} />
-        <Route path="registry" element={<Registry />} />
-      </Routes>
-    </BrowserRouter>
+    <Router/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "RocGrotesk";
+  src: local("RocGrotesk"),
+    url("./fonts/RocGrotesk.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Curvilingus";
+  src: local("Curvilingus"),
+    url("./fonts/Curvilingus.otf") format("truetype");
+  font-weight: bold;
+}
