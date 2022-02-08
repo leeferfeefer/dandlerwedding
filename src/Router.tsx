@@ -10,11 +10,6 @@ import { Registry } from "./pages/Registry";
 import { ComingSoon } from "./pages/ComingSoon";
 
 export const Router = () => {
-
-  React.useEffect(() => {
-    document.title = "Dan + Chandler = Dandler"
-  }, []);
-
   return (
     <BrowserRouter>
         <Routes>
