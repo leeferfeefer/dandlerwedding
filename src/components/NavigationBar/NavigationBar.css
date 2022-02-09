@@ -1,0 +1,43 @@
+
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+	display: flex;
+}
+
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  margin: auto;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: rgb(29, 25, 231);
+  font-size: 18px;
+  /* min-width: 50px; */
+  /* max-width: 200px; */
+  /* width: 100%; */
+  /* display: flex; */
+  /* justify-content: center; */
+}
+  
+.navbar li a:hover {
+  color: rgb(151, 7, 247);
+  /* border: darkmagenta; */
+  /* border-color: darkmagenta; */
+  /* background-color: darkmagenta; */
+  /* border-radius: 2px; */
+  /* font-size: 20px; */
+}
+  
+/* .navbar li a:active {
+  background-color: deepskyblue;
+  border-radius: 5px;
+} */

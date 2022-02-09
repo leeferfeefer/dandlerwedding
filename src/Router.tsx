@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   BrowserRouter,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { RSVP } from "./pages/RSVP";

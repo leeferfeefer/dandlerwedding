@@ -1,3 +1,12 @@
+/* body {
+  margin: 0;
+  padding: 0;
+} */
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+}
 
 .comingsoon-text {
   font-family: "RocGrotesk";

@@ -6,10 +6,7 @@ type ComingSoonProps = {};
 
 export const ComingSoon = (props: ComingSoonProps) => {
   return (
-    <div style={{
-      width: "100vw",
-      height: "100vh",
-    }}>
+    <div className="main-container">
       <div className="comingsoon-header">     
         <img src={logo} alt="Wedding Logo" width={700}/>
         <span className="comingsoon-text light-text">are getting married</span>
