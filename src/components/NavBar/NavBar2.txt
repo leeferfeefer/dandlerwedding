@@ -1,0 +1,110 @@
+// import React, { useState, useEffect } from "react";
+// // import { Controller, Scene } from "react-scrollmagic";
+// // import { Tween, Timeline } from "react-gsap";
+// import {
+//   Link,
+//   NavLink
+// } from "react-router-dom";
+// import "./NavBar.css";
+// // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// // import { library } from "@fortawesome/fontawesome-svg-core";
+// // import { fab } from "@fortawesome/free-brands-svg-icons";
+// // library.add(fab);
+
+// export const NavBar = () => {
+//   const navLinks = [
+//     { name: "Home", to: "/home" },
+//     { name: "RSVP", to: "/rsvp" },
+//     { name: "Registry", to: "/registry" },
+//     { name: "Gallery", to: "/gallery" },
+//     { name: "Travel", to: "/travel" },
+//   ];
+  
+//   // const [width, setWidth] = useState(window.innerWidth);
+//   // const updateWidthAndHeight = () => {
+//   //   setWidth(window.innerWidth);
+//   // };
+
+//   // useEffect(() => {
+//   //   window.addEventListener("resize", updateWidthAndHeight);
+//   //   return () => window.removeEventListener("resize", updateWidthAndHeight);
+//   // });
+
+//   // if (width < 1150) {
+//   //   return (
+//   //     <MobileNav
+//   //       width={width}
+//   //       logoUrl={logoUrl}
+//   //       background={background}
+//   //       navLinks={navLinks}
+//   //       socialIcon={socialIcon}
+//   //       sticky={sticky}
+//   //     />
+//   //   );
+//   // }
+
+//   const Error = () => <h1>Please pass the component in the menu prop</h1>;
+
+//   return (
+//     <div style={{ minHeight: "100vh", width: "100%" }}>
+//         <Controller>
+//           <Scene triggerHook="onLeave" duration={300} pin>
+//             {(progress: number) => (
+//               <Timeline totalProgress={progress} paused>
+//                 <Tween
+//                   from={{ height: "150px", background: "#E6C2A9"}}
+//                   to={{ height: "80px", background: "#AE4A25" }}
+//                 >
+//                   <div className="header">
+//                     <div className="navLogo">
+//                       <Link to="/">
+//                         <div className="logo-container">
+//                           <Timeline totalProgress={progress} paused>
+//                             <Tween
+//                               from={{ height: "150px" }}
+//                               to={{ height: "70px" }}
+//                             >
+//                               <img
+//                                 className="LogoImg"
+//                                 src={require("../../images/WeddingLogo.png")}
+//                                 alt="logo"
+//                               />
+//                             </Tween>
+//                           </Timeline>
+//                         </div>
+//                       </Link>
+//                     </div>
+
+//                     <div className="navLinks">
+//                       <ul>
+//                         {navLinks.map((link, i) => (
+//                           <li key={i}>
+//                             <NavLink
+//                               to={link.to}
+//                               className={({isActive}) => isActive ? "home" : ""}
+//                             >
+//                               {link.name}
+//                             </NavLink>
+//                           </li>
+//                         ))}
+//                       </ul>
+//                     </div>                    
+//                   </div>
+//                 </Tween>
+//               </Timeline>
+//             )}
+//           </Scene>
+//         </Controller>
+//         {/* <Switch>
+//           {navLinks.map((link, i) => (
+//             <Route
+//               key={i}
+//               exact
+//               path={link.to}
+//               component={link.component ? link.component : Error}
+//             />
+//           ))}
+//         </Switch> */}
+//     </div>
+//   );
+// };

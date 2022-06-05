@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import { NavBar } from "../components/NavBar/NavBar";
 
 type RegistryProps = {
 
@@ -7,15 +8,11 @@ type RegistryProps = {
 
 export const Registry = (props: RegistryProps) => {
   return (
-    <div>
-      <h1>Coming Soon!</h1>
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem"
-        }}
-      >
-      </nav>
+    <div className="main-container">
+      <NavBar/>
+      <div style={{height: 1000}}> 
+        Coming Soon!
+      </div>
     </div>
   );
 }
