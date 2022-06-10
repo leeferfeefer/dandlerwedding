@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  background-color: #E6C2A9;
+  background-color: var(--tan);
 }
 
 .navLogo {

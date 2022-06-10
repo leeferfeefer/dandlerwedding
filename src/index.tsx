@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { Router } from "./Router";
-import './fonts/RocGrotesk.ttf';
+import './fonts/RocGrotesk.otf';
 import './fonts/Curvilingus.otf';
 
 ReactDOM.render(

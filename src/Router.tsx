@@ -4,10 +4,10 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { Home } from "./pages/Home";
+import { Home } from "./pages/Home/Home";
 import { RSVP } from "./pages/RSVP";
 import { Registry } from "./pages/Registry";
-import { ComingSoon } from "./pages/ComingSoon";
+import { ComingSoon } from "./pages/ComingSoon/ComingSoon";
 
 export const Router = () => {
   return (

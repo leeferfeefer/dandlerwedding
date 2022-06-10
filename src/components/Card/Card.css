@@ -1,0 +1,48 @@
+.card-container {
+  background-color: var(--tan);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 100px);
+  border-radius: 15px;
+}
+
+.inner-container {
+  margin: 50px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container {
+  flex: 1;
+  display: flex;
+}
+
+.right-container {
+  flex: 1;
+  display: flex;
+}
+
+.when-text-container {
+  margin-left: 80px;
+}
+
+.when-text {
+  font-family: "Curvilingus";
+  font-size: 80px;
+  text-align: left;
+  /* letter-spacing: 2px;
+  font-weight: 400; */
+  color: var(--dark-orange);
+}
+
+.date-text {
+  font-family: "RocGrotesk";
+  color: var(--dark-orange);
+  font-size: 50px;
+  text-align: left;
+}
