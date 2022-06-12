@@ -21,6 +21,7 @@ export const NavBar = () => {
             <NavLink
               to={link.to}
               className={({isActive}) => isActive ? "home" : ""}
+              key={i}
             >
               {link.name}
             </NavLink>

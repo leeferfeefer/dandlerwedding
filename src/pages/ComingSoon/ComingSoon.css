@@ -1,3 +1,11 @@
+.container {
+  /* height: 100%;
+  width: 100%; */
+}
+/* IDK WHY I HAVE TO DO THIS >:| */
+#root {
+  height: 100%;
+}
 
 .comingsoon-text {
   font-family: "RocGrotesk";

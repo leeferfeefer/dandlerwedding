@@ -1,7 +1,6 @@
-/* body {
-  margin: 0;
-  padding: 0;
-} */
+html, body, #app, #app>div {
+  height: 100%;
+}
 
 :root {
   --dark-orange: #AE4A25;
@@ -35,7 +34,10 @@ Pink: e4b2bc
   background-color: var(--dark-orange);
 }
 
-.main-container {
-  width: 100vw;
-  height: 100vh;
+.light-orange-background {
+  background-color: var(--light-orange);
+}
+
+.light-orange-color {
+  color: var(--light-orange);
 }
