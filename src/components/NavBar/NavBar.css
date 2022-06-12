@@ -6,18 +6,8 @@
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  background-color: var(--pink);
-}
-
-.navLogo {
-  height: 100%;
-  width: 64px;
-}
-
-.logoImg {
-  margin: 4px 4px 0 0;
-  width: 56px;
-  height: 56px;
+  background-color: var(--light-orange);
+  position: fixed;
 }
 
 .navLinks {

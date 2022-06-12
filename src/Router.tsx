@@ -10,10 +10,12 @@ import { Registry } from "./pages/Registry/Registry";
 import { Wedding } from './pages/Wedding/Wedding';
 import { Travel } from './pages/Travel/Travel';
 import { Gallery } from './pages/Gallery/Gallery';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 export const Router = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="wedding" element={<Wedding />} />

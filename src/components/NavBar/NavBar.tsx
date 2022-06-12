@@ -27,16 +27,7 @@ export const NavBar = () => {
               {link.name}
             </NavLink>
           ))}
-      </div> 
-      <div className="navLogo">
-        <Link to="/">
-          <img
-            className="logoImg"
-            src={require("../../images/WeddingLogo.png")}
-            alt="logo"
-          />  
-        </Link>
-      </div>                           
+      </div>         
     </div>         
   );
 };

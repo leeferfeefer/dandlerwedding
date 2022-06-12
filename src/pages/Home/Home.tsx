@@ -7,6 +7,7 @@ import { Card } from "../../components/Card/Card";
 import WhenImageSrc from "../../images/WhenImage.png";
 import WhereImageSrc from "../../images/WhereImage.png";
 import { Button } from "../../components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 
 const letsPartyStyle: React.CSSProperties = {
@@ -31,17 +32,9 @@ const letsPartyContainerStyle: React.CSSProperties = {
 };
 
 type HomeProps = {};
-// {leftComponent && <div className='left-container'>
-// { leftComponent }
-// </div> }
-// {rightComponent && <div className='right-container'>
-// { rightComponent }
-// </div> }
-//   flex-direction: row;
-//  flex: 1;
-// display: flex;
 
 export const Home = (props: HomeProps) => {
+  const navigate = useNavigate();
 
   const whenComponent = (
     <div className='when-container'>
@@ -82,7 +75,7 @@ export const Home = (props: HomeProps) => {
   
 
   const letsPartyButtonClicked = () => {
-    console.log("LETS PARTY!!!!");
+    navigate("/wedding");
   };  
 
   return (

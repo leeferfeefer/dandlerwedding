@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   flex: 1;
+  margin-top: 50px; /* space for navbar*/
 }
 
 .accomodations-container {
