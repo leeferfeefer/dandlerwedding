@@ -1,0 +1,16 @@
+.travel-container {
+  background-color: var(--tan);
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.travel-header {
+  color: var(--light-orange);
+  font-family: 'Curvilingus';
+  font-size: 80px;
+  margin-top: 80px;
+}

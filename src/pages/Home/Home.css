@@ -1,9 +1,9 @@
-.container {
+/* .container {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .home-container {
   background-color: var(--dark-orange);
@@ -15,8 +15,23 @@
   flex: 1;
 }
 
+.when-container {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
 .when-text-container {
   margin-left: 80px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.when-image-container {
+  display: flex;
+  flex: 1;
 }
 
 .when-text {
@@ -35,9 +50,24 @@
   text-align: left;
 }
 
+.where-container {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
 .where-text-container {
   margin-right: 80px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   width: 100%;
+}
+
+.where-image-container {
+  display: flex;
+  flex: 1;
 }
 
 .where-text {

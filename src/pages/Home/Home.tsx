@@ -31,38 +31,56 @@ const letsPartyContainerStyle: React.CSSProperties = {
 };
 
 type HomeProps = {};
-
+// {leftComponent && <div className='left-container'>
+// { leftComponent }
+// </div> }
+// {rightComponent && <div className='right-container'>
+// { rightComponent }
+// </div> }
+//   flex-direction: row;
+//  flex: 1;
+// display: flex;
 
 export const Home = (props: HomeProps) => {
   const buttonRef = React.useRef<HTMLElement>(null);
 
-  const whenText = (
-    <div className="when-text-container">
-      <div className='when-text'>
-        When
+  const whenComponent = (
+    <div className='when-container'>
+      <div className='when-image-container'>
+        <img src={WhenImageSrc} alt="Main Page Image 1" width="100%" style={{borderRadius: "15px"}}/>
       </div>
-      <div className='date-text'>
-        November 5th, 2022
+      <div className="when-text-container">
+        <div className='when-text'>
+          When
+        </div>
+        <div className='date-text'>
+          November 5th, 2022
+        </div>
       </div>
     </div>
-  );
-  const whereText = (
-    <div className='where-text-container'>
-      <div className='where-text'>
-        Where
-      </div>
-      <div className='where-place-container'>
-        <div className='brickyard-text'>
-          The Brickyard
+  )
+
+  const whereComponent = (
+    <div className='where-container'>
+      <div className='where-text-container'>
+        <div className='where-text'>
+          Where
         </div>
-        <div className='marietta-text'>
-          Marietta, GA
-        </div>
+        <div className='where-place-container'>
+          <div className='brickyard-text'>
+            The Brickyard
+          </div>
+          <div className='marietta-text'>
+            Marietta, GA
+          </div>
+        </div>    
       </div>    
+      <div className='where-image-container'>
+        <img src={WhereImageSrc} alt="Main Page Image 2" width="100%" style={{borderRadius: "15px"}}/>
+      </div>
     </div>
   );
-  const whenImg = <img src={WhenImageSrc} alt="Main Page Image 1" width="100%" style={{borderRadius: "15px"}}/>
-  const whereImg = <img src={WhereImageSrc} alt="Main Page Image 2" width="100%" style={{borderRadius: "15px"}}/>
+  
 
   const letsPartyButtonClicked = () => {
     console.log("LETS PARTY!!!!");
@@ -73,8 +91,12 @@ export const Home = (props: HomeProps) => {
       <NavBar/>
       <div className="home-container"> 
         <img src={LogoSrc} alt="Wedding Logo" width={500} style={{marginTop: "50px"}}/>
-        <Card leftComponent={whenImg} rightComponent={whenText} style={{marginTop: "50px"}}/>
-        <Card leftComponent={whereText} rightComponent={whereImg} style={{marginTop: "50px"}}/>
+        <Card style={{marginTop: "50px"}}>
+          { whenComponent }
+        </Card>
+        <Card style={{marginTop: "50px"}}>
+          { whereComponent }
+        </Card>
         <Button 
             componentRef={buttonRef}
             title={`Let's Party!`} 

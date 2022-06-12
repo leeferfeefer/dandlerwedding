@@ -12,17 +12,6 @@
   margin: 50px;
   display: flex;
   flex: 1;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.left-container {
-  flex: 1;
-  display: flex;
-}
-
-.right-container {
-  flex: 1;
-  display: flex;
 }
