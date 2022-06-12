@@ -14,7 +14,7 @@ const letsPartyStyle: React.CSSProperties = {
   borderRadius: "40px",
   backgroundColor: "#CB683F",
   color: "#E6C2A9",
-  fontFamily: "RocGrotesk",
+  fontFamily: "Avenir",
   fontSize: "40px",
   width: "300px",
   margin: "20px",
@@ -22,6 +22,7 @@ const letsPartyStyle: React.CSSProperties = {
   textAlign: 'center',
   alignItems: "center",
   justifyContent: "center",
+  cursor: "pointer",
 };
 
 const letsPartyContainerStyle: React.CSSProperties = {

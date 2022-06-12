@@ -8,10 +8,11 @@ import "./NavBar.css";
 export const NavBar = () => {
   const navLinks = [
     { name: "Home", to: "/home" },
+    { name: "Wedding", to: "/wedding" },
     { name: "RSVP", to: "/rsvp" },
+    { name: "Travel", to: "/travel" },
     { name: "Registry", to: "/registry" },
     { name: "Gallery", to: "/gallery" },
-    { name: "Travel", to: "/travel" },
   ];
 
   return (

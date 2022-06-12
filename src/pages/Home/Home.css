@@ -1,6 +1,8 @@
 .container {
-  /* height: 100%;
-  width: 100%; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-container {
@@ -10,6 +12,7 @@
   flex-direction: column;
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .when-text-container {
@@ -26,7 +29,7 @@
 }
 
 .date-text {
-  font-family: "RocGrotesk";
+  font-family: "Avenir";
   color: var(--dark-orange);
   font-size: 40px;
   text-align: left;
@@ -50,14 +53,14 @@
 
 .brickyard-text {
   text-align: right;
-  font-family: "RocGrotesk";
+  font-family: "Avenir";
   color: var(--dark-orange);
   font-size: 40px;
 }
 
 .marietta-text {
   text-align: right;
-  font-family: "RocGrotesk";
+  font-family: "Avenir";
   color: var(--dark-orange);
   font-size: 40px;
 }
