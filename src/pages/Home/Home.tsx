@@ -42,7 +42,6 @@ type HomeProps = {};
 // display: flex;
 
 export const Home = (props: HomeProps) => {
-  const buttonRef = React.useRef<HTMLElement>(null);
 
   const whenComponent = (
     <div className='when-container'>
@@ -98,7 +97,6 @@ export const Home = (props: HomeProps) => {
           { whereComponent }
         </Card>
         <Button 
-            componentRef={buttonRef}
             title={`Let's Party!`} 
             style={letsPartyStyle} 
             containerStyle={letsPartyContainerStyle}
