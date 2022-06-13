@@ -17,7 +17,7 @@ export const Router = () => {
     <BrowserRouter>
       <ScrollToTop/>
         <Routes>
-          <Route path="home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="wedding" element={<Wedding />} />
           <Route path="rsvp" element={<RSVP />} />
           <Route path="travel" element={<Travel />} />

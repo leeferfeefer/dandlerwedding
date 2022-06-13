@@ -7,7 +7,7 @@ import "./NavBar.css";
 
 export const NavBar = () => {
   const navLinks = [
-    { name: "Home", to: "/home" },
+    { name: "Home", to: "/" },
     { name: "Wedding", to: "/wedding" },
     { name: "RSVP", to: "/rsvp" },
     { name: "Travel", to: "/travel" },
