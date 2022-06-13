@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: calc(100% - 200px);
+  width: calc(100% - 400px);
   border-radius: 15px;
 }
 
