@@ -23,7 +23,6 @@
 .navLinks a {
   text-decoration: none;
   display: block;
-  color: white;
   padding: 8px 0;
   letter-spacing: 2px;
   font-weight: 400;
@@ -32,64 +31,12 @@
   align-items: center;
   justify-content: center;
   font-family: "Avenir";
-  /* min-width: 95px; */
 }
 
-/* .navLinks ul {
-  margin: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-evenly;
-  list-style: none;
-} */
-
-/* .navLinks li {
-  display: block;
-  margin: 0 5px;
-  text-align: center;
-} */
-
-/* .navLinks li a:hover {
-  border: 2px solid white;
-  border-radius: 25px;
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-} */
-
-/* .navLinks a:hover {
-  text-decoration: none;
-} */
-
-
-
-/* .tooltiptext {
-  opacity: 0;
-  width: 120px;
-  background-color: #303030;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 140%;
-  right: -125%;
-  margin-left: -60px;
+.selected {
+  color: var(--pink);
 }
 
-.tooltiptext:after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -10px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent #303030 transparent;
-} */
-
-/* .home {
-  border: 2px solid white;
-  border-radius: 25px;
-} */
+.not-selected {
+  color: white;
+}

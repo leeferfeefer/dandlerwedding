@@ -22,16 +22,15 @@ const bookHereStyle: React.CSSProperties = {
   cursor: "pointer",
 };
 
+const bookingURL = "https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ATLMAHF&groupCode=FORDCI&arrivaldate=2022-11-04&departuredate=2022-11-06&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT";
 
-type TravelProps = {
-
-};
+type TravelProps = {};
 
 export const Travel = (props: TravelProps) => {
 
 
   const bookHereButtonClicked = () => {
-    console.log("BOOKING!!!!");
+    window.open(bookingURL);
   };  
 
   const accomodations = (

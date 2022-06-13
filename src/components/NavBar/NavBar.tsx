@@ -21,7 +21,7 @@ export const NavBar = () => {
           {navLinks.map((link, i) => (
             <NavLink
               to={link.to}
-              className={({isActive}) => isActive ? "home" : ""}
+              className={({isActive}) => isActive ? "selected" : "not-selected"}
               key={i}
             >
               {link.name}
