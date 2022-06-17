@@ -3,7 +3,7 @@ import '../../App.css';
 import './Button.css';
 
 type ButtonProps = {
-  title: string;
+  title?: string;
   onClick: () => void;
   componentRef?: any;
   style?: React.CSSProperties;
@@ -11,10 +11,11 @@ type ButtonProps = {
   onMouseEnter?: (setStyleCallback: any) => void;
   onMouseLeave?: () => void;
   buttonClassName?: string;
+  imgSrc?: any;
 };
 
 export const Button = (props: ButtonProps) => {
-  const { onClick, style, title, containerStyle, 
+  const { onClick, style, title, containerStyle, imgSrc,
     componentRef, onMouseEnter, onMouseLeave, buttonClassName } = props;
   
   const [ styleState, setStyleState ] = React.useState<React.CSSProperties>(style ?? {});
@@ -37,7 +38,8 @@ export const Button = (props: ButtonProps) => {
         onMouseLeave={_onMouseLeave}        
         onClick={onClick} 
         style={styleState}>
-          {title}
+          { title }
+          { imgSrc && <img src={imgSrc} alt="button-img"/> }
       </div>
     </div>
   );

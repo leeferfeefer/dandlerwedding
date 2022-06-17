@@ -13,14 +13,13 @@
   display: flex;
   align-items: center;
   flex: 1;
-  margin-top: 50px; /* space for navbar*/
+  margin-top: 64px; /* space for navbar*/
 }
 
 .when-container {
   flex-direction: row;
   display: flex;
   align-items: center;
-  flex: 1;
 }
 
 .when-text-container {
@@ -55,7 +54,6 @@
   flex-direction: row;
   display: flex;
   align-items: center;
-  flex: 1;
 }
 
 .where-text-container {

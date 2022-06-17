@@ -4,16 +4,13 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
   height: 64px;
   background-color: var(--light-orange);
   position: fixed;
 }
 
 .navLinks {
-  right: 10px;
-  width: 50%;
-  min-width: 30%;
+  width: 60%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -31,6 +28,7 @@
   align-items: center;
   justify-content: center;
   font-family: "Avenir";
+  font-size: calc(1vw + 1vh);
 }
 
 .selected {
@@ -39,4 +37,9 @@
 
 .not-selected {
   color: white;
+}
+
+.logo-img {
+  max-width: 25%;
+  height: auto;
 }

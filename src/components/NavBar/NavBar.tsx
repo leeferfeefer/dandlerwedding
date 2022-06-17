@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
-  Link,
   NavLink
 } from "react-router-dom";
 import "./NavBar.css";
+import { useMediaQuery } from 'react-responsive';
 
 export const NavBar = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+
   const navLinks = [
     { name: "Home", to: "/" },
     { name: "Wedding", to: "/wedding" },
@@ -16,18 +18,18 @@ export const NavBar = () => {
   ];
 
   return (
-    <div className="header">
-      <div className="navLinks">
-          {navLinks.map((link, i) => (
-            <NavLink
-              to={link.to}
-              className={({isActive}) => isActive ? "selected" : "not-selected"}
-              key={i}
-            >
-              {link.name}
-            </NavLink>
-          ))}
-      </div>         
+    <div className="header" style={{height: isMobile ? "44px" : undefined}}>
+      <div className="navLinks" style={{width: isMobile ? "100%" : undefined}}>
+        {navLinks.map((link, i) => (
+          <NavLink
+            to={link.to}
+            className={({isActive}) => isActive ? "selected" : "not-selected"}
+            key={i}
+          >
+            {link.name}
+          </NavLink>
+        ))}
+      </div>    
     </div>         
   );
 };
