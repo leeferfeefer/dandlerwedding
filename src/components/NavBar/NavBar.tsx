@@ -6,7 +6,7 @@ import "./NavBar.css";
 import { useMediaQuery } from 'react-responsive';
 
 export const NavBar = () => {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
+  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   const navLinks = [
     { name: "Home", to: "/" },

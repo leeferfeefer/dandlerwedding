@@ -8,7 +8,7 @@ type CardProps = {
 };
 
 export const Card = (props: CardProps) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
+  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   const { style, children} = props;
   return (

@@ -11,7 +11,7 @@ const bookingURL = "https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn
 type TravelProps = {};
 
 export const Travel = (props: TravelProps) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
+  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   const bookHereStyle: React.CSSProperties = {
     height: isMobile ? "40px" : "60px",
@@ -34,10 +34,10 @@ export const Travel = (props: TravelProps) => {
 
   const accomodations = (
     <div className='accomodations-container'>
-      <div className='accomodations-header' style={isMobile ? {fontSize: "30px"} : undefined}>
+      <div className='accomodations-header' style={isMobile ? {fontSize: "30px", marginBottom: "15px"} : undefined}>
         Accomodations
       </div>
-      <div className='accomadations-text' style={isMobile ? {fontSize: "20px", padding: 0} : undefined}>
+      <div className='accomodations-text' style={isMobile ? {fontSize: "20px", padding: 0, marginBottom: "30px"} : undefined}>
       The Hilton Marietta Conference Center is the 
 preferred hotel for our wedding weekend and rooms have 
 been reserved for our guests. It is the closest hotel to the venue and 
@@ -56,10 +56,10 @@ provides easy access to all of Marietta Square’s offerings.
 
   const airTravel = (
     <div className='accomodations-container'>
-      <div className='accomodations-header' style={isMobile ? {fontSize: "30px"} : undefined}>
+      <div className='accomodations-header' style={isMobile ? {fontSize: "30px", marginBottom: "15px"} : undefined}>
         Air Travel
       </div>
-      <div className='accomadations-text' style={isMobile ? {fontSize: "20px", padding: 0} : undefined}>
+      <div className='accomodations-text' style={isMobile ? {fontSize: "20px", padding: 0} : undefined}>
       For our out of town guests, the closest major airport is 
 Hartsfield Jackson International Airport. It is a 45 minute drive
 from Marietta without traffic. Renting a car is recommended. 
@@ -74,10 +74,10 @@ from Marietta without traffic. Renting a car is recommended.
         <div className='travel-header' style={ isMobile ? { fontSize: "75px", marginTop: "40px"} : undefined}>
           Travel
         </div>
-        <Card style={{ borderWidth: "8px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px"}}>
+        <Card style={{ borderWidth: "5px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px"}}>
           { accomodations }
         </Card>
-        <Card style={{ borderWidth: "8px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px", marginBottom: "100px"}}>
+        <Card style={{ borderWidth: "5px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px", marginBottom: "100px"}}>
           { airTravel}
         </Card>
       </div>
