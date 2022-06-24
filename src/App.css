@@ -1,7 +1,7 @@
-/* html, body, #app, #app>div, #root {
+html, body, #app, #app>div {
   height: 100%;
   min-height: 100%;
-} */
+}
 
 :root {
   --dark-orange: #AE4A25;
