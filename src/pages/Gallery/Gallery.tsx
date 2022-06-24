@@ -4,7 +4,6 @@ import './Gallery.css';
 import { NavBar } from "../../components/NavBar/NavBar";
 import { PhotoGallery } from "../../components/PhotoGallery/PhotoGallery";
 import { useMediaQuery } from 'react-responsive';
-import { ComingSoon } from '../ComingSoon/ComingSoon';
 
 type GalleryProps = {
 
@@ -17,10 +16,9 @@ export const Gallery = (props: GalleryProps) => {
   return (
     <div className="container">
       <NavBar/>
-      {/* <div className='gallery-container' style={{ marginTop: isMobile ? "44px" : undefined}}>
+      <div className='gallery-container' style={{ marginTop: isMobile ? "44px" : undefined}}>
         <PhotoGallery/>
-      </div> */}
-      <ComingSoon/>
+      </div>
     </div>
   );
 }
