@@ -17,6 +17,12 @@ export const shuffle = (array) => {
   return array;
 }
 
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+export const GalleryImages = importAll(require.context('./images/Gallery/', false, /\.(png|jpe?g|svg)$/));
+
 
 export const GalleryPhotos = [
   {

@@ -12,31 +12,41 @@ type ButtonProps = {
   onMouseLeave?: () => void;
   buttonClassName?: string;
   imgSrc?: any;
+  disabled?: boolean;
 };
 
 export const Button = (props: ButtonProps) => {
   const { onClick, style, title, containerStyle, imgSrc,
-    componentRef, onMouseEnter, onMouseLeave, buttonClassName } = props;
-  
+    componentRef, onMouseEnter, onMouseLeave, buttonClassName, disabled } = props;
   const [ styleState, setStyleState ] = React.useState<React.CSSProperties>(style ?? {});
+
+  React.useEffect(() => {
+    if (disabled) {
+      setStyleState({ ...styleState, backgroundColor: 'gray', cursor: 'not-allowed'});
+    } else {
+      setStyleState({ ...styleState, backgroundColor: style?.backgroundColor, cursor: style?.cursor});
+    }
+  }, [disabled]);
   
   const _onMouseEnter = () => {
-    onMouseEnter && onMouseEnter(setStyleState);
+    !disabled && onMouseEnter && onMouseEnter(setStyleState);
   };
 
   const _onMouseLeave = () => {
-    onMouseLeave && onMouseLeave();
-    setStyleState(style ?? {});
+    if (!disabled) {
+      onMouseLeave && onMouseLeave();
+      setStyleState(style ?? {});
+    }
   };
 
   return (
     <div style={containerStyle}>
-      <div 
+      <div         
         className={buttonClassName}
         ref={componentRef} 
         onMouseEnter={_onMouseEnter}
         onMouseLeave={_onMouseLeave}        
-        onClick={onClick} 
+        onClick={disabled ? () => {} : onClick} 
         style={styleState}>
           { title }
           { imgSrc && <img src={imgSrc} alt="button-img"/> }
