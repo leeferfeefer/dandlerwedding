@@ -1,0 +1,7 @@
+.rsvp-text {
+  font-family: "Avenir";
+  color: var(--dark-orange);
+  font-size: 20px;
+  text-align: center;
+  width: 60%;
+}

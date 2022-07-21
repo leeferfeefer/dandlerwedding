@@ -1,5 +1,5 @@
 import { apiInstance } from "./Axios.service";
 
-export const getRSVPs = async (): Promise<any> => {
-    return apiInstance.get("/rsvps");
+export const findRSVP = async (name: string): Promise<any> => {
+  return apiInstance.get("/rsvps/", { params: { name }});
 };

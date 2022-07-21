@@ -1,0 +1,17 @@
+.rsvp-container {
+  background-color: var(--dark-orange);
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: 64px; /* space for navbar*/
+}
+
+.inner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
