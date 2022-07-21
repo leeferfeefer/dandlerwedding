@@ -1,0 +1,99 @@
+/* .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+} */
+
+.home-container {
+  background-color: var(--dark-orange);
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: 64px; /* space for navbar*/
+}
+
+.when-container {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.when-text-container {
+  margin-left: 80px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.when-image-container {
+  display: flex;
+  flex: 1;
+}
+
+.when-text {
+  font-family: "Curvilingus";
+  font-size: 80px;
+  text-align: left;
+  /* letter-spacing: 2px;
+  font-weight: 400; */
+  color: var(--dark-orange);
+}
+
+.date-text {
+  font-family: "Avenir";
+  color: var(--dark-orange);
+  font-size: 40px;
+  text-align: left;
+}
+
+.where-container {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.where-text-container {
+  margin-right: 80px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}
+
+.where-image-container {
+  display: flex;
+  flex: 1;
+}
+
+.where-text {
+  font-family: "Curvilingus";
+  font-size: 80px;
+  text-align: right;
+  color: var(--dark-orange);
+}
+
+.where-place-container {
+  /* width: 100%; */
+}
+
+.brickyard-text {
+  text-align: right;
+  font-family: "Avenir";
+  color: var(--dark-orange);
+  font-size: 40px;
+}
+
+.marietta-text {
+  text-align: right;
+  font-family: "Avenir";
+  color: var(--dark-orange);
+  font-size: 40px;
+}
+
+.lets-party-button {
+  background-color: var(--pink);
+}

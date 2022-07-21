@@ -1,51 +1,51 @@
-/* body {
-  margin: 0;
-  padding: 0;
+/* html, body, #app, #app>div, #root {
+  height: 100%;
+  min-height: 100%;
 } */
 
-.main-container {
-  width: 100vw;
-  height: 100vh;
+:root {
+  --dark-orange: #AE4A25;
+  --light-orange: #CB683F;
+  --tan: #E6C2A9;
+  --pink: #E4B2BC;
 }
 
-.comingsoon-text {
-  font-family: "RocGrotesk";
-  font-size: 30px;
-  text-align: center;
-}
+/************* COLORS *************/
+
+/* 
+Dark Orange: af4b26
+Light Orange: cb683f
+Tan: e6c2a9
+Pink: e4b2bc 
+*/
 
 .light-text {
-  color: #E6C2A9;
+  color: var(--tan);
 }
 
 .dark-text {
-  color: #AE4A25;
+  color: var(--dark-orange);
 }
 
-.comingsoon-header {
-  background-color: #AE4A25;
-  height: 75%;
+.light-background {
+  background-color: var(--tan);
+}
+
+.dark-background {
+  background-color: var(--dark-orange);
+}
+
+.light-orange-background {
+  background-color: var(--light-orange);
+}
+
+.light-orange-color {
+  color: var(--light-orange);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.comingsoon-footer {
-  background-color: #E6C2A9;
-  height: 25%;  
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.comingsoon-date {
-  font-family: "Curvilingus";
-  font-size: 100px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }

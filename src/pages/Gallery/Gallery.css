@@ -1,0 +1,10 @@
+.gallery-container {
+  background-color: var(--tan);
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: 64px; /* space for navbar*/
+}

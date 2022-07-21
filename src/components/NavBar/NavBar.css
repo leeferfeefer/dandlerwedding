@@ -1,0 +1,46 @@
+.header {
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 64px;
+  background-color: var(--light-orange);
+  position: fixed;
+  z-index: 500;
+}
+
+.navLinks {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navLinks a {
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Avenir";
+  font-size: calc(1vw + 1vh);
+}
+
+.selected {
+  color: var(--pink);
+}
+
+.not-selected {
+  color: white;
+}
+
+.logo-img {
+  max-width: 25%;
+  height: auto;
+}
