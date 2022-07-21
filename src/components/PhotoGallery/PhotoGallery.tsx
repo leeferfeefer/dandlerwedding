@@ -33,7 +33,7 @@ export const PhotoGallery = (props: PhotoGalleryProps) => {
         photos={photos} 
         direction={"column"} 
         margin={5} 
-        columns={5} 
+        columns={isMobile ? 3 : 5} 
         onClick={openLightbox}
       />      
       <ModalGateway>

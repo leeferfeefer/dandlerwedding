@@ -19,6 +19,15 @@ Tan: e6c2a9
 Pink: e4b2bc 
 */
 
+/************* COLORS *************/
+
+/* 
+Dark Orange: af4b26
+Light Orange: cb683f
+Tan: e6c2a9
+Pink: e4b2bc 
+*/
+
 .light-text {
   color: var(--tan);
 }
