@@ -1,3 +1,4 @@
+const GalleryImages = require("./images/Gallery/index.js");
 
 export const shuffle = (array) => {
   let currentIndex = array.length,  randomIndex;
@@ -17,550 +18,549 @@ export const shuffle = (array) => {
   return array;
 }
 
-
 export const GalleryPhotos = [
   {
-      "src": "/static/media/0.e9adbd6cc55794e20ce2.jpg",
+      "src": GalleryImages.image0,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/1.ab442ac610797b4620cc.jpg",
+      "src": GalleryImages.image1,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/10.31fa5505deb6dd8543ac.jpg",
+      "src": GalleryImages.image10,
       "width": 1024,
       "height": 1306
   },
   {
-      "src": "/static/media/100.b119a9f5010da5395721.jpg",
+      "src": GalleryImages.image100,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/101.79fb7dc65a4593f3e071.jpg",
+      "src": GalleryImages.image101,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/102.5536d00e4af86872182e.jpg",
+      "src": GalleryImages.image102,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/103.594327e61931257f7bbf.jpg",
+      "src": GalleryImages.image103,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/104.43df1876aa0b67c532e5.jpg",
+      "src": GalleryImages.image104,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/107.f93cf66ab2869da4065b.jpg",
+      "src": GalleryImages.image107,
       "width": 1024,
       "height": 1425
   },
   {
-      "src": "/static/media/105.724583342d95918db3da.jpg",
+      "src": GalleryImages.image105,
       "width": 1024,
       "height": 1425
   },
   {
-      "src": "/static/media/106.863b54fe2bdfd70f084b.jpg",
+      "src": GalleryImages.image106,
       "width": 1024,
       "height": 1425
   },
   {
-      "src": "/static/media/108.dee4a293e2097ba66ef2.jpg",
+      "src": GalleryImages.image108,
       "width": 1024,
       "height": 1425
   },
   {
-      "src": "/static/media/11.cdafe5e661b390a02fd8.jpg",
+      "src": GalleryImages.image11,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/14.96faccd140b14c31a86f.jpg",
+      "src": GalleryImages.image14,
       "width": 1024,
       "height": 1441
   },
   {
-      "src": "/static/media/12.f3b9eff984dd6ef4e454.jpg",
+      "src": GalleryImages.image12,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/13.d564d90d026f50547440.jpg",
+      "src": GalleryImages.image13,
       "width": 1024,
       "height": 1452
   },
   {
-      "src": "/static/media/15.9b0cc144f65c5794220e.jpg",
+      "src": GalleryImages.image15,
       "width": 1024,
       "height": 1441
   },
   {
-      "src": "/static/media/16.0b2c6b71142b80bdb726.jpg",
+      "src": GalleryImages.image16,
       "width": 1024,
       "height": 1441
   },
   {
-      "src": "/static/media/18.a2db1c067cf7daeb8a58.jpg",
+      "src": GalleryImages.image18,
       "width": 1024,
       "height": 1441
   },
   {
-      "src": "/static/media/17.20473c7636959496fb38.jpg",
+      "src": GalleryImages.image17,
       "width": 1024,
       "height": 1441
   },
   {
-      "src": "/static/media/19.c38c3e5ac159a775398f.jpg",
+      "src": GalleryImages.image19,
       "width": 1024,
       "height": 1491
   },
   {
-      "src": "/static/media/2.e948b1870fd09900c792.jpg",
+      "src": GalleryImages.image2,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/20.7e821f08396ae1602837.jpg",
+      "src": GalleryImages.image20,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/21.b34af997a19c3dd9ae2e.jpg",
+      "src": GalleryImages.image21,
       "width": 1024,
       "height": 1491
   },
   {
-      "src": "/static/media/23.9dfac07d020aa0103f41.jpg",
+      "src": GalleryImages.image23,
       "width": 1024,
       "height": 1442
   },
   {
-      "src": "/static/media/22.ac0dbf7cb30b1e285f40.jpg",
+      "src": GalleryImages.image22,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/25.1d20f8b4d20e13e3963d.jpg",
+      "src": GalleryImages.image25,
       "width": 1024,
       "height": 1442
   },
   {
-      "src": "/static/media/24.92b524c8abf593a1735e.jpg",
+      "src": GalleryImages.image24,
       "width": 1024,
       "height": 1442
   },
   {
-      "src": "/static/media/27.613ce41ba3d9a794ff0a.jpg",
+      "src": GalleryImages.image27,
       "width": 1024,
       "height": 1442
   },
   {
-      "src": "/static/media/26.ceb62018b12c1dc5cbe9.jpg",
+      "src": GalleryImages.image26,
       "width": 1024,
       "height": 1442
   },
   {
-      "src": "/static/media/29.7c31449ed858c373e8cc.jpg",
+      "src": GalleryImages.image29,
       "width": 1024,
       "height": 683
   },
   {
-      "src": "/static/media/28.230738640c0d09d02890.jpg",
+      "src": GalleryImages.image28,
       "width": 1024,
       "height": 727
   },
   {
-      "src": "/static/media/3.90e7c49ffe40a96d764d.jpg",
+      "src": GalleryImages.image3,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/30.b385361de0d07aa6d12a.jpg",
+      "src": GalleryImages.image30,
       "width": 1024,
       "height": 734
   },
   {
-      "src": "/static/media/31.55c5b3938e1877733522.jpg",
+      "src": GalleryImages.image31,
       "width": 1024,
       "height": 734
   },
   {
-      "src": "/static/media/32.7dacdbbd85cd5bc73dbd.jpg",
+      "src": GalleryImages.image32,
       "width": 1024,
       "height": 734
   },
   {
-      "src": "/static/media/33.57e16fbf0c2825e4805e.jpg",
+      "src": GalleryImages.image33,
       "width": 1024,
       "height": 734
   },
   {
-      "src": "/static/media/34.23d8e9143d6175adb7c1.jpg",
+      "src": GalleryImages.image34,
       "width": 1024,
       "height": 1417
   },
   {
-      "src": "/static/media/36.551ff38f0f0a376b2896.jpg",
+      "src": GalleryImages.image36,
       "width": 1024,
       "height": 1378
   },
   {
-      "src": "/static/media/35.74680e179e0acd293459.jpg",
+      "src": GalleryImages.image35,
       "width": 1024,
       "height": 1444
   },
   {
-      "src": "/static/media/37.70f2a8e366d29ad60ba9.jpg",
+      "src": GalleryImages.image37,
       "width": 1024,
       "height": 1378
   },
   {
-      "src": "/static/media/38.63ad828b421e17a1f936.jpg",
+      "src": GalleryImages.image38,
       "width": 1024,
       "height": 1444
   },
   {
-      "src": "/static/media/39.56952dd725f5dbe5620b.jpg",
+      "src": GalleryImages.image39,
       "width": 1024,
       "height": 1378
   },
   {
-      "src": "/static/media/4.be53c911466ce006b972.jpg",
+      "src": GalleryImages.image4,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/40.489956b52a76c6507ece.jpg",
+      "src": GalleryImages.image40,
       "width": 1024,
       "height": 1378
   },
   {
-      "src": "/static/media/41.69b5e32b62089461bb47.jpg",
+      "src": GalleryImages.image41,
       "width": 1024,
       "height": 1464
   },
   {
-      "src": "/static/media/42.52f47c73374e2d991b93.jpg",
+      "src": GalleryImages.image42,
       "width": 1024,
       "height": 1464
   },
   {
-      "src": "/static/media/43.10365fd12aabbb9d739e.jpg",
+      "src": GalleryImages.image43,
       "width": 1024,
       "height": 1464
   },
   {
-      "src": "/static/media/44.ad46233faa08d1e60da1.jpg",
+      "src": GalleryImages.image44,
       "width": 1024,
       "height": 1451
   },
   {
-      "src": "/static/media/45.c7bc15cc2157d7f8e023.jpg",
+      "src": GalleryImages.image45,
       "width": 1024,
       "height": 1456
   },
   {
-      "src": "/static/media/46.dc5aea4d2fea93f14c8d.jpg",
+      "src": GalleryImages.image46,
       "width": 1024,
       "height": 1451
   },
   {
-      "src": "/static/media/47.469a0d700b6d619c0207.jpg",
+      "src": GalleryImages.image47,
       "width": 1024,
       "height": 1451
   },
   {
-      "src": "/static/media/48.2a8dcffb3813243b7399.jpg",
+      "src": GalleryImages.image48,
       "width": 1024,
       "height": 1451
   },
   {
-      "src": "/static/media/5.7f95fc60b0db04d3feac.jpg",
+      "src": GalleryImages.image5,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/50.40075c184a4583a091e9.jpg",
+      "src": GalleryImages.image50,
       "width": 1024,
       "height": 1363
   },
   {
-      "src": "/static/media/49.478d4f22ca26c4d4f025.jpg",
+      "src": GalleryImages.image49,
       "width": 1024,
       "height": 1451
   },
   {
-      "src": "/static/media/51.85a53743557edbae97a8.jpg",
+      "src": GalleryImages.image51,
       "width": 1024,
       "height": 1378
   },
   {
-      "src": "/static/media/52.cfcd64bf9483c6f8ac6b.jpg",
+      "src": GalleryImages.image52,
       "width": 1024,
       "height": 1378
   },
   {
-      "src": "/static/media/53.6421f72908bd793e3044.jpg",
+      "src": GalleryImages.image53,
       "width": 1024,
       "height": 1363
   },
   {
-      "src": "/static/media/56.72ea09cd89d95559d236.jpg",
+      "src": GalleryImages.image56,
       "width": 1024,
       "height": 1497
   },
   {
-      "src": "/static/media/55.352fa7fa2317055e3033.jpg",
+      "src": GalleryImages.image55,
       "width": 1024,
       "height": 1459
   },
   {
-      "src": "/static/media/54.dff31c2016c529858e60.jpg",
+      "src": GalleryImages.image54,
       "width": 1024,
       "height": 1497
   },
   {
-      "src": "/static/media/57.9b220d32504abf9bd4df.jpg",
+      "src": GalleryImages.image57,
       "width": 1024,
       "height": 1459
   },
   {
-      "src": "/static/media/58.b854b1c56cb638e51128.jpg",
+      "src": GalleryImages.image58,
       "width": 1024,
       "height": 1497
   },
   {
-      "src": "/static/media/59.001a49bbcccf73fa201f.jpg",
+      "src": GalleryImages.image59,
       "width": 1024,
       "height": 1497
   },
   {
-      "src": "/static/media/6.bc9676ca8071a0e87882.jpg",
+      "src": GalleryImages.image6,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/60.5caa1ae4058ca4c866c8.jpg",
+      "src": GalleryImages.image60,
       "width": 1024,
       "height": 1497
   },
   {
-      "src": "/static/media/61.6dfed2e2131de219eb0a.jpg",
+      "src": GalleryImages.image61,
       "width": 1024,
       "height": 1497
   },
   {
-      "src": "/static/media/62.4840d936991a39949833.jpg",
+      "src": GalleryImages.image62,
       "width": 1024,
       "height": 1546
   },
   {
-      "src": "/static/media/63.253f68aca37f6f29ce51.jpg",
+      "src": GalleryImages.image63,
       "width": 1024,
       "height": 1546
   },
   {
-      "src": "/static/media/66.31dfc94ac87780c6f14d.jpg",
+      "src": GalleryImages.image66,
       "width": 1024,
       "height": 1546
   },
   {
-      "src": "/static/media/64.70700a432ac3c94edac9.jpg",
+      "src": GalleryImages.image64,
       "width": 1024,
       "height": 1546
   },
   {
-      "src": "/static/media/65.9c6688522da9abc8c35c.jpg",
+      "src": GalleryImages.image65,
       "width": 1024,
       "height": 1546
   },
   {
-      "src": "/static/media/67.86b888c21c4ee2f9d170.jpg",
+      "src": GalleryImages.image67,
       "width": 1024,
       "height": 1447
   },
   {
-      "src": "/static/media/68.ed07545ca5e5e4a505c3.jpg",
+      "src": GalleryImages.image68,
       "width": 1024,
       "height": 1475
   },
   {
-      "src": "/static/media/69.64c5d0a88e51fece93a7.jpg",
+      "src": GalleryImages.image69,
       "width": 1024,
       "height": 1480
   },
   {
-      "src": "/static/media/7.5e2538845596041764cb.jpg",
+      "src": GalleryImages.image7,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/70.105c5171da6e0f1b6769.jpg",
+      "src": GalleryImages.image70,
       "width": 1024,
       "height": 1480
   },
   {
-      "src": "/static/media/71.565e1b3dac16e7d72b2f.jpg",
+      "src": GalleryImages.image71,
       "width": 1024,
       "height": 1480
   },
   {
-      "src": "/static/media/72.664f6b7b652b8cb85f1c.jpg",
+      "src": GalleryImages.image72,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/74.14b01c9810d45e0f8cc1.jpg",
+      "src": GalleryImages.image74,
       "width": 1024,
       "height": 1446
   },
   {
-      "src": "/static/media/73.0844e0e4144f41dc492e.jpg",
+      "src": GalleryImages.image73,
       "width": 1024,
       "height": 1480
   },
   {
-      "src": "/static/media/75.e05ded22fec6fedd23c7.jpg",
+      "src": GalleryImages.image75,
       "width": 1024,
       "height": 1446
   },
   {
-      "src": "/static/media/76.08e6619e80ff985bf0bb.jpg",
+      "src": GalleryImages.image76,
       "width": 1024,
       "height": 1446
   },
   {
-      "src": "/static/media/77.d3990be0859e63a6bc37.jpg",
+      "src": GalleryImages.image77,
       "width": 1024,
       "height": 1488
   },
   {
-      "src": "/static/media/78.aafae3873b659d217d9f.jpg",
+      "src": GalleryImages.image78,
       "width": 1024,
       "height": 1517
   },
   {
-      "src": "/static/media/79.22fecf677687a2c53de6.jpg",
+      "src": GalleryImages.image79,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/8.1d4bf281e3c728a0f6f7.jpg",
+      "src": GalleryImages.image8,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/80.ed99762ebe2095f8969d.jpg",
+      "src": GalleryImages.image80,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/81.a64b9676a92cae97a5da.jpg",
+      "src": GalleryImages.image81,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/82.90cedfba783b6c83e569.jpg",
+      "src": GalleryImages.image82,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/83.4ca92d7d81aa535d814d.jpg",
+      "src": GalleryImages.image83,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/84.04616e109f1a46d7a251.jpg",
+      "src": GalleryImages.image84,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/85.fa74e27ea5c5ae0f1c8d.jpg",
+      "src": GalleryImages.image85,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/86.9acfbcfa0b199aa9ce4e.jpg",
+      "src": GalleryImages.image86,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/87.c629df5846146100bc6f.jpg",
+      "src": GalleryImages.image87,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/88.1f217937051c873a6c11.jpg",
+      "src": GalleryImages.image88,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/89.f78bda38fedfe3a0c092.jpg",
+      "src": GalleryImages.image89,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/9.4efab785e47ddc45eb37.jpg",
+      "src": GalleryImages.image9,
       "width": 1024,
       "height": 1457
   },
   {
-      "src": "/static/media/90.e8ba30b6385ae0feb587.jpg",
+      "src": GalleryImages.image90,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/91.c837ecee8e532e90ec4b.jpg",
+      "src": GalleryImages.image91,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/92.0b563b86e94e9d804224.jpg",
+      "src": GalleryImages.image92,
       "width": 1024,
       "height": 1536
   },
   {
-      "src": "/static/media/93.7d3cb8ef7687546fefe9.jpg",
+      "src": GalleryImages.image93,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/94.2ea70ad9d7185190f429.jpg",
+      "src": GalleryImages.image94,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/95.8ce655e562df51a71270.jpg",
+      "src": GalleryImages.image95,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/96.0d1624558192345e68d8.jpg",
+      "src": GalleryImages.image96,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/97.0a1661987cf15c7785f2.jpg",
+      "src": GalleryImages.image97,
       "width": 1024,
       "height": 1454
   },
   {
-      "src": "/static/media/98.bb4a8f7dec9680fc8a96.jpg",
+      "src": GalleryImages.image98,
       "width": 1024,
       "height": 1423
   },
   {
-      "src": "/static/media/99.01fef57cdf3afb391b17.jpg",
+      "src": GalleryImages.image99,
       "width": 1024,
       "height": 1423
   }
