@@ -32,7 +32,6 @@ export const Registry = (props: RegistryProps) => {
     fontFamily: "Avenir",
     fontSize: isMobile ? "15px" : "30px",
     width: isMobile ? "150px" : "300px",
-    margin: isMobile ? "10px" : "20px",
     display: 'flex',
     textAlign: 'center',
     alignItems: "center",
@@ -63,53 +62,71 @@ export const Registry = (props: RegistryProps) => {
           The couple is registered at the following stores:
         </div>
 
-        <div className='registry-place-container' style={isMobile ? { marginTop: "50px"} : undefined}>
-          <div className="registry-place-image-container" style={{marginBottom: "20px"}}>
-            <img src={CrateBarrelLogo} width="100%" alt="CrateBarrel Logo" />
+        <div className="registry-places" style={{marginTop: isMobile ? "20px" : "50px", marginBottom: "100px"}}>
+          <div className='registry-place-container'>
+            <div className="registry-place-image-container">
+              <img src={CrateBarrelLogo} width="100%" alt="CrateBarrel Logo" />
+            </div>
+            <div className='button-container' style={{marginTop: isMobile ? "20px" : "50px"}}>
+              <Button 
+                style={buttonStyle}
+                title="Go To Registry"
+                onClick={crateBarrelButtonClicked}    
+                containerStyle={buttonContainer}
+                onMouseEnter={(setStyleState) => {
+                  setStyleState({...buttonStyle, opacity: .5})
+                }}
+              />
+            </div>            
           </div>
-          <Button 
-            style={buttonStyle}
-            title="Go To Registry"
-            onClick={crateBarrelButtonClicked}    
-            containerStyle={buttonContainer}
-            onMouseEnter={(setStyleState) => {
-              setStyleState({...buttonStyle, opacity: .5})
-            }}
-          />
-        </div>
 
-        <div className='registry-place-container' style={isMobile ? { marginTop: "50px"} : undefined}>
-          <div className="registry-place-image-container" style={{width: isMobile ? "75%" : undefined}}>
-            <img src={WilliamsSonomaLogo} width="100%" alt="Williams Sonoma Logo" />
+          <hr className='divider' style={isMobile ? 
+            { marginTop: "30px", marginBottom: "30px" } : 
+            { marginTop: "60px", marginBottom: "60px"}
+          }/>
+
+          <div className='registry-place-container'>
+            <div className="registry-place-image-container" style={{width: isMobile ? "75%" : undefined}}>
+              <img src={WilliamsSonomaLogo} width="100%" alt="Williams Sonoma Logo" />
+            </div>
+            <div className='and-container' style={isMobile ? {fontSize: "20px"} : undefined}>&</div>
+            <div className="registry-place-image-container" style={{width: isMobile ? "50%" : "30%"}}>
+              <img src={WestElmLogo} width="100%" alt="West Elm Logo" />
+            </div>      
+            <div className='button-container' style={{marginTop: isMobile ? "5px" : "20px"}}>
+              <Button 
+                style={buttonStyle}
+                title="Go To Registry"
+                onClick={williamswestButtonClicked}    
+                containerStyle={buttonContainer}
+                onMouseEnter={(setStyleState) => {
+                  setStyleState({...buttonStyle, opacity: .5})
+                }}
+              />
+            </div>
           </div>
-          <div className='and-container' style={isMobile ? {fontSize: "30px"} : undefined}>&</div>
-          <div className="registry-place-image-container" style={{width: isMobile ? "50%" : "30%"}}>
-            <img src={WestElmLogo} width="100%" alt="West Elm Logo" />
-          </div>          
-          <Button 
-            style={buttonStyle}
-            title="Go To Registry"
-            onClick={williamswestButtonClicked}    
-            containerStyle={buttonContainer}
-            onMouseEnter={(setStyleState) => {
-              setStyleState({...buttonStyle, opacity: .5})
-            }}
-          />
-        </div>
 
-        <div className='registry-place-container' style={isMobile ? { marginTop: "50px"} : undefined}>
-          <div className="registry-place-image-container" style={{width: isMobile ? "50%" : "30%"}}>
-            <img src={Amazon} width="100%" alt="Amazon Logo" />
-          </div>          
-          <Button 
-            style={buttonStyle}
-            title="Go To Registry"
-            onClick={amazonButtonClicked}    
-            containerStyle={buttonContainer}
-            onMouseEnter={(setStyleState) => {
-              setStyleState({...buttonStyle, opacity: .5})
-            }}
-          />
+          <hr className='divider' style={isMobile ? 
+            { marginTop: "30px", marginBottom: "30px" } : 
+            { marginTop: "60px", marginBottom: "60px"}
+          }/>
+
+          <div className='registry-place-container'>
+            <div className="registry-place-image-container" style={{width: isMobile ? "50%" : "30%"}}>
+              <img src={Amazon} width="100%" alt="Amazon Logo" />
+            </div>       
+            <div className='button-container' style={{marginTop: isMobile ? "5px" : "20px"}}>
+              <Button 
+                style={buttonStyle}
+                title="Go To Registry"
+                onClick={amazonButtonClicked}    
+                containerStyle={buttonContainer}
+                onMouseEnter={(setStyleState) => {
+                  setStyleState({...buttonStyle, opacity: .5})
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
