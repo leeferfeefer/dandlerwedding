@@ -22,9 +22,7 @@ type RegistryProps = {
 export const Registry = (props: RegistryProps) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
-  const buttonContainer: React.CSSProperties = {
-    marginTop: isMobile ? "13px" : "25px",
-  };
+  const buttonContainer: React.CSSProperties = {};
 
   const buttonStyle: React.CSSProperties = {
     height: isMobile ? "40px" : "80px",
@@ -57,16 +55,16 @@ export const Registry = (props: RegistryProps) => {
   return (
     <div className="container">
       <NavBar/>
-      <div className="registry-container">
-        <div className="registry-header">
+      <div className="registry-container" style={{ marginTop: isMobile ? "44px" : undefined}}> 
+        <div className="registry-header" style={ isMobile ? { fontSize: "75px", marginTop: "40px"} : undefined}>
           Registry
         </div>
-        <div className="registry-secondary-header">
+        <div className="registry-secondary-header" style={ isMobile ? { fontSize: "25px", marginTop: "25px", marginBottom: "25px"} : undefined}>
           The couple is registered at the following stores:
         </div>
 
-        <div className='registry-place-container'>
-          <div className="registry-place-image-container">
+        <div className='registry-place-container' style={isMobile ? { marginTop: "50px"} : undefined}>
+          <div className="registry-place-image-container" style={{marginBottom: "20px"}}>
             <img src={CrateBarrelLogo} width="100%" alt="CrateBarrel Logo" />
           </div>
           <Button 
@@ -80,12 +78,12 @@ export const Registry = (props: RegistryProps) => {
           />
         </div>
 
-        <div className='registry-place-container'>
-          <div className="registry-place-image-container">
+        <div className='registry-place-container' style={isMobile ? { marginTop: "50px"} : undefined}>
+          <div className="registry-place-image-container" style={{width: isMobile ? "75%" : undefined}}>
             <img src={WilliamsSonomaLogo} width="100%" alt="Williams Sonoma Logo" />
           </div>
-          <div className='and-container'>&</div>
-          <div className="registry-place-image-container" style={{width: "25%"}}>
+          <div className='and-container' style={isMobile ? {fontSize: "30px"} : undefined}>&</div>
+          <div className="registry-place-image-container" style={{width: isMobile ? "50%" : "30%"}}>
             <img src={WestElmLogo} width="100%" alt="West Elm Logo" />
           </div>          
           <Button 
@@ -99,8 +97,8 @@ export const Registry = (props: RegistryProps) => {
           />
         </div>
 
-        <div className='registry-place-container'>      
-          <div className="registry-place-image-container" style={{width: "25%"}}>
+        <div className='registry-place-container' style={isMobile ? { marginTop: "50px"} : undefined}>
+          <div className="registry-place-image-container" style={{width: isMobile ? "50%" : "30%"}}>
             <img src={Amazon} width="100%" alt="Amazon Logo" />
           </div>          
           <Button 
