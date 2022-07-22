@@ -12,7 +12,7 @@ export const Card = (props: CardProps) => {
 
   const { style, children} = props;
   return (
-    <div className="card-container" style={{...style, width: isMobile ? "90%" : undefined}}>
+    <div className="card-container" style={{...style, width: isMobile ? "90%" : style?.width}}>
       <div className='inner-container' style={{margin: isMobile ? "15px" : undefined}}>
         { children }
       </div>     
