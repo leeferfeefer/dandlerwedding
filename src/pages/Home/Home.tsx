@@ -21,7 +21,6 @@ export const Home = (props: HomeProps) => {
     marginBottom: isMobile ? "150px" : "300px",
   };
 
-
   const letsPartyStyle: React.CSSProperties = {
     height: isMobile ? "40px" : "80px",
     borderRadius: isMobile ? "20px" : "40px",
