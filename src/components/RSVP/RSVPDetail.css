@@ -1,23 +1,25 @@
 
-
-
-.header-container {
+.rsvp-detail-header-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.title {
+.rsvp-detail-title {
   font-family: "Curvilingus";
   font-size: 80px;
   color: var(--light-orange);
+  text-align: center;
+  width: 100%;
 }
 
-.date {
+.rsvp-detail-date {
   font-family: "Avenir";
   font-size: 40px;
   color: var(--dark-orange);
+  text-align: center;
+  width: 100%;
 }
 
 .names-container {
@@ -27,17 +29,26 @@
   align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .name-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  width: 100%;
 }
 
-.rsvp-button-container {
+.rsvp-detail-name {
+  font-family: "Avenir";
+  font-size: 40px;
+  color: var(--dark-orange);
+  text-align: center;
+}
+
+.rsvp-detail-button-container {
   display: flex;
   flex-direction: row;
   justify-content: center;

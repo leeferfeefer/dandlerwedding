@@ -18,15 +18,19 @@ type ButtonProps = {
 export const Button = (props: ButtonProps) => {
   const { onClick, style, title, containerStyle, imgSrc,
     componentRef, onMouseEnter, onMouseLeave, buttonClassName, disabled } = props;
-  const [ styleState, setStyleState ] = React.useState<React.CSSProperties>(style ?? {});
+  const [ styleState, setStyleState ] = React.useState<React.CSSProperties>({});
+
+  // React.useLayoutEffect(() => {
+  //   setStyleState(props.style ?? {});
+  // }, [ props.style ]);
 
   React.useEffect(() => {
     if (disabled) {
-      setStyleState({ ...styleState, backgroundColor: 'gray', cursor: 'not-allowed'});
+      setStyleState({ ...style, backgroundColor: 'gray', cursor: 'not-allowed'});
     } else {
-      setStyleState({ ...styleState, backgroundColor: style?.backgroundColor, cursor: style?.cursor});
+      setStyleState({ ...style, backgroundColor: style?.backgroundColor, cursor: style?.cursor});
     }
-  }, [disabled]);
+  }, [disabled, style]);
   
   const _onMouseEnter = () => {
     !disabled && onMouseEnter && onMouseEnter(setStyleState);

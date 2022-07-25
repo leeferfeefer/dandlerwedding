@@ -7,7 +7,8 @@ import LogoSrc from "../../images/WeddingLogo.png";
 import { Card } from "../../components/Card/Card";
 import { RSVPLookup } from '../../components/RSVP/RSVPLookup';
 import { RSVPData } from '../../services/RSVP.service';
-import { RSVPDetail } from "../../components/RSVP/RSVPDetail";
+import { RSVPDetail, RSVPState } from "../../components/RSVP/RSVPDetail";
+import { RSVPDietary } from '../../components/RSVP/RSVPDietary';
 
 type RSVPProps = {
 
@@ -18,6 +19,7 @@ export const RSVP = (props: RSVPProps) => {
   
   const [ isLookupVisible, setIsLookupVisible ] = React.useState(true);
   const [ isDetailVisible, setIsDetailVisible ] = React.useState(false);  
+  const [ isDietaryVisible, setIsDietaryVisible ] = React.useState(false);
   const [ rsvpData, setRsvpData ] = React.useState<RSVPData>();
 
   const RSVPOnSuccess = (rsvp: RSVPData) => {
@@ -32,8 +34,14 @@ export const RSVP = (props: RSVPProps) => {
     setIsDetailVisible(false);
   }; 
 
+  const onDetailContinueButtonClicked = (reservationState: RSVPState) => {
+    console.log("RSVP responded data: ", reservationState);
+    setIsDetailVisible(false);
+    setIsDietaryVisible(true);
+  };
+
   return (
-    <div className="container" style={{height: "100vh"}}>
+    <div className="container">
       <NavBar/>
       <div className="rsvp-container" style={{ marginTop: isMobile ? "44px" : undefined}}> 
         <img className="logo-img" src={LogoSrc} alt="Wedding Logo" style={{marginTop: "50px", maxWidth: isMobile ? "50%" : undefined }}/>
@@ -41,9 +49,10 @@ export const RSVP = (props: RSVPProps) => {
             marginTop: isMobile ? "25px" : "50px", 
             marginBottom: isMobile ? "300": "600px"
           }}>
-          <div className="inner-card">
+          <div className="rsvp-inner-card">
             { isLookupVisible && <RSVPLookup onSuccess={RSVPOnSuccess}/> }
-            { rsvpData && isDetailVisible && <RSVPDetail onBackButtonClicked={onDetailBackButtonClicked} rsvpData={rsvpData}/> }
+            { rsvpData && isDetailVisible && <RSVPDetail onBackButtonClicked={onDetailBackButtonClicked} onContinueButtonClicked={onDetailContinueButtonClicked} rsvpData={rsvpData}/> }
+            { rsvpData && isDietaryVisible && <RSVPDietary/>}
           </div>
         </Card>
       </div>
