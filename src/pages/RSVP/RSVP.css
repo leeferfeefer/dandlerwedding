@@ -1,6 +1,6 @@
 .rsvp-container {
   background-color: var(--dark-orange);
-  height: 100vh;
+  height: 100%;
   width: 100%;
   flex-direction: column;
   display: flex;
@@ -9,9 +9,10 @@
   margin-top: 64px; /* space for navbar*/
 }
 
-.inner-card {
+.rsvp-inner-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 75%;
 }

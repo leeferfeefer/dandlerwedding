@@ -16,11 +16,11 @@ type ButtonProps = {
  * 
  * @param props React.useEffect(() => {
     if (disabled) {
-      setStyleState({ ...styleState, backgroundColor: 'gray', cursor: 'not-allowed'});
+      setStyleState({ ...style, backgroundColor: 'gray', cursor: 'not-allowed'});
     } else {
-      setStyleState({ ...styleState, backgroundColor: style?.backgroundColor, cursor: style?.cursor});
+      setStyleState({ ...style, backgroundColor: style?.backgroundColor, cursor: style?.cursor});
     }
-  }, [disabled]);
+  }, [disabled, style]);
   
   const _onMouseEnter = () => {
     !disabled && onMouseEnter && onMouseEnter(setStyleState);
