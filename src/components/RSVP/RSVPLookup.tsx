@@ -41,7 +41,7 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
     // color: "#E6C2A9",
     fontFamily: "Curvilingus",
     fontSize: isMobile ? "15px" : "30px",
-    width: isMobile ? "200px" : "400px",
+    width: isMobile ? "250px" : "500px",
     marginTop: isMobile ? "20px" : "30px",
     display: 'flex',
     textAlign: 'center',

@@ -6,18 +6,18 @@ import { RSVPData } from '../../services/RSVP.service';
 import { capitalizeFirstLetters } from "../../Globals";
 
 type RSVPDetailProps = {
-  onBackButtonClicked: () => void,
+  onBackButtonClicked: () => void;
   onContinueButtonClicked: (reservationState: RSVPState) => void;
-  rsvpData: RSVPData,
+  rsvpData: RSVPData;
 };
 
 export type RSVPState = {
-  [ key: string ]: boolean,
+  [ key: string ]: boolean;
 }
 
 type RSVPNameProps = {
-  name: string,
-  onSelected: (state: RSVPState) => void,
+  name: string;
+  onSelected: (state: RSVPState) => void;
 };
 
 enum SelectionState {

@@ -19,6 +19,7 @@ export const RSVP = (props: RSVPProps) => {
   const [ isLookupVisible, setIsLookupVisible ] = React.useState(true);
   const [ isDetailVisible, setIsDetailVisible ] = React.useState(false);  
   const [ isDietaryVisible, setIsDietaryVisible ] = React.useState(false);
+  const [ reservationState, setReservationState ] = React.useState({});
   const [ rsvpData, setRsvpData ] = React.useState<RSVPData>();
 
   const RSVPOnSuccess = (rsvp: RSVPData) => {
@@ -35,8 +36,14 @@ export const RSVP = (props: RSVPProps) => {
 
   const onDetailContinueButtonClicked = (reservationState: RSVPState) => {
     console.log("RSVP responded data: ", reservationState);
+    setReservationState(reservationState);
     setIsDetailVisible(false);
     setIsDietaryVisible(true);
+  };
+
+  const onDietaryBackButtonClicked = () => {
+    setIsDetailVisible(true);
+    setIsDietaryVisible(false);
   };
 
   return (
@@ -49,9 +56,21 @@ export const RSVP = (props: RSVPProps) => {
           }}>
           <div className="rsvp-inner-card">
             { isLookupVisible && <RSVPLookup onSuccess={RSVPOnSuccess}/> }
-            { rsvpData && isDetailVisible && <RSVPDetail onBackButtonClicked={onDetailBackButtonClicked} onContinueButtonClicked={onDetailContinueButtonClicked} rsvpData={rsvpData}/> }
-            { rsvpData && isDietaryVisible && <RSVPDietary/>}
-          </div>
+            { rsvpData && isDetailVisible && (
+              <RSVPDetail 
+                onBackButtonClicked={onDetailBackButtonClicked} 
+                onContinueButtonClicked={onDetailContinueButtonClicked} 
+                rsvpData={rsvpData}
+              /> 
+            )}
+            { rsvpData && isDietaryVisible && (
+              <RSVPDietary 
+                onBackButtonClicked={onDietaryBackButtonClicked} 
+                rsvpData={rsvpData}
+                reservationState={reservationState}
+              />
+            )}
+          </div>  
         </Card>
       </div>
     </div>

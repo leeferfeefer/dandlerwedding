@@ -15,6 +15,12 @@ type ButtonProps = {
 /**
  * 
  * @param props React.useEffect(() => {
+export const Button = (props: ButtonProps) => {
+  const { onClick, style, title, containerStyle, imgSrc,
+    componentRef, onMouseEnter, onMouseLeave, buttonClassName, disabled } = props;
+  const [ styleState, setStyleState ] = React.useState<React.CSSProperties>({});
+
+  React.useEffect(() => {
     if (disabled) {
       setStyleState({ ...style, backgroundColor: 'gray', cursor: 'not-allowed'});
     } else {
