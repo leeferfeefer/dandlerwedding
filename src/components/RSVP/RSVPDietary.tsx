@@ -79,6 +79,7 @@ export const RSVPDietary = (props: RSVPDietaryProps) => {
       const updatedRSVPData = { ...props.rsvpData, dietary: dietaryRestrictions, rsvpCount: props.rsvpData.totalCount};
       const response = await updateRSVP(updatedRSVPData);
       const { data } = response;
+      setIsLoading(false);
       if (data?.errorCode) {
         abortRef.current = null;
         setAttempts(attempts+1);        
@@ -90,11 +91,11 @@ export const RSVPDietary = (props: RSVPDietaryProps) => {
     } catch (error: any) {
       console.log("RSVP ERROR", JSON.stringify(error));
       console.log("RSVP ERROR", JSON.stringify(error?.response));
+      setIsLoading(false);
       abortRef.current = null;
       setAttempts(attempts+1);
       setErrorMessage(ERROR_MSG.UNKNOWN);
     }
-    setIsLoading(false);
   };
 
   const onInputChange = (event: any, name: string) => {
@@ -115,7 +116,7 @@ export const RSVPDietary = (props: RSVPDietaryProps) => {
           <textarea className='rsvp-dietary-input' onChange={(e) => onInputChange(e, props.rsvpData.name)}/>  
         </div>
         {props.rsvpData.alternateNames.map(altName => (
-          <div className='rsvp-dietary-name-container'>
+          <div key={altName} className='rsvp-dietary-name-container'>
             <div className='rsvp-dietary-name'>
               {capitalizeFirstLetters(altName)}
             </div>

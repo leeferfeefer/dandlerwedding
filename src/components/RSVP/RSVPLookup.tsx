@@ -109,6 +109,7 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
       abortRef.current = new AbortController();
       const response = await findRSVP(reservationInputText, abortRef.current.signal);
       const { data } = response;
+      setIsLoading(false);
       if (data?.errorCode) {
         abortRef.current = null;
         if (data.errorCode !== 103) { // already rsvp
@@ -123,11 +124,11 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
     } catch (error: any) {
       console.log("RSVP ERROR", JSON.stringify(error));
       console.log("RSVP ERROR", JSON.stringify(error?.response));
+      setIsLoading(false);
       abortRef.current = null;
       setAttempts(attempts+1);
       setErrorMessage(ERROR_MSG.UNKNOWN);
     }
-    setIsLoading(false);
   };
 
   return (

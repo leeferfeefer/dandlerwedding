@@ -20,6 +20,7 @@ export const RSVP = (props: RSVPProps) => {
   const [ isLookupVisible, setIsLookupVisible ] = React.useState(true);
   const [ isDetailVisible, setIsDetailVisible ] = React.useState(false);  
   const [ isDietaryVisible, setIsDietaryVisible ] = React.useState(false);
+  const [ isSuccessVisible, setIsSuccessVisible ] = React.useState(false); 
   const [ rsvpData, setRsvpData ] = React.useState<RSVPData>();
 
   const RSVPOnSuccess = (rsvp: RSVPData) => {
@@ -49,7 +50,8 @@ export const RSVP = (props: RSVPProps) => {
   };
 
   const onRSVPSubmitted = () => {
-    // Show success screen
+    setIsDietaryVisible(false);
+    setIsSuccessVisible(true);
   };
 
   return (
@@ -76,6 +78,16 @@ export const RSVP = (props: RSVPProps) => {
                 onBackButtonClicked={onDietaryBackButtonClicked} 
                 rsvpData={rsvpData}
               />
+            )}
+            { isSuccessVisible && (
+              <div className='rsvp-success-container'>
+                <div className='rsvp-success-message-header'>
+                  Thank you for your RSVP!
+                </div>
+                <div className='rsvp-success-message'>
+                  We are looking forward to seeing everybody!
+                </div>
+              </div>
             )}
           </div>  
         </Card>

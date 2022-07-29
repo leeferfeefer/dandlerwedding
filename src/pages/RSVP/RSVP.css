@@ -16,3 +16,28 @@
   justify-content: center;
   width: 75%;
 }
+
+.rsvp-success-container {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.rsvp-success-message-header {
+  font-family: "Curvilingus";
+  font-size: 60px;
+  color: var(--dark-orange);
+  text-align: center;
+  width: 100%;
+}
+
+.rsvp-success-message {
+  font-family: "Avenir";
+  font-size: 40px;
+  color: var(--dark-orange);
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
