@@ -104,8 +104,8 @@ export const RSVPDietary = (props: RSVPDietaryProps) => {
   };
 
   return (
-    <div className='rsvp-dietary-container'>
-      <div className='rsvp-dietary-header' style={{marginBottom: isMobile ? "20px": "40px"}}>
+    <>
+      <div className='rsvp-dietary-header'>
         Any dietary restrictions?
       </div>
       <div className='rsvp-dietary-names-container'>
@@ -142,6 +142,6 @@ export const RSVPDietary = (props: RSVPDietaryProps) => {
       />
       { errorMessage && <div>{ errorMessage }</div>}
       <Loader isLoading={isLoading}/>
-    </div>
+    </>
   );
 }
