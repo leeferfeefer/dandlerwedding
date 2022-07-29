@@ -27,15 +27,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   width: 100%;
 }
 
 .rsvp-detail-name-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-bottom: 20px;
   width: 100%;
@@ -45,7 +45,8 @@
   font-family: "Avenir";
   font-size: 40px;
   color: var(--dark-orange);
-  text-align: center;
+  text-align: left;
+  width: 600px;
 }
 
 .rsvp-detail-button-container {

@@ -80,7 +80,9 @@ const RSVPName = (props: RSVPNameProps) => {
 
   return (
     <div className='rsvp-detail-name-container'>
-      <div className='rsvp-detail-name'>{capitalizeFirstLetters(props.name)}</div>
+      <div className='rsvp-detail-name' style={isMobile ? {fontSize: "20px"} : undefined}>
+        {capitalizeFirstLetters(props.name)}
+      </div>
       <div className='rsvp-detail-button-container'>
         <Button
           style={{ ...buttonStyle, ...acceptButtonSelectionStyle }}
@@ -156,10 +158,10 @@ export const RSVPDetail = (props: RSVPDetailProps) => {
   return (
     <>
       <div className='rsvp-detail-header-container'>
-        <div className='rsvp-detail-title'>
+        <div className='rsvp-detail-title' style={isMobile ? {fontSize: "40px"} : undefined}>
           Wedding Day
         </div>
-        <div className='rsvp-detail-date'>
+        <div className='rsvp-detail-date' style={isMobile ? {fontSize: "15px"} : undefined}>
           Saturday, November 5th 2022
         </div>
       </div>

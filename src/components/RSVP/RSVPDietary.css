@@ -1,13 +1,5 @@
 
 
-.rsvp-dietary-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-}
-
 .rsvp-dietary-header {
   color: var(--light-orange);
   font-family: 'Curvilingus';
@@ -17,19 +9,19 @@
 
 .rsvp-dietary-names-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
   width: 100%;
-  height: 100%;
-  margin-bottom: 30px;
 }
 
 .rsvp-dietary-name-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -38,13 +30,13 @@
   font-family: "Avenir";
   font-size: 40px;
   color: var(--dark-orange);
-  text-align: center;
-  width: 100%;
+  text-align: left;
+  width: 600px;
 }
 
 .rsvp-dietary-input {
   outline: none;
-  width: 100%;
+  width: 420px;
   height: 50px;
   font-family: "Avenir";
   font-size: 20px;
