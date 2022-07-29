@@ -7,13 +7,15 @@ import { Button } from "../../components/Button/Button";
 import { useMediaQuery } from 'react-responsive';
 
 const bookingURL = "https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ATLMAHF&groupCode=FORDCI&arrivaldate=2022-11-04&departuredate=2022-11-06&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT";
+const mariettaSquareURL = "https://visitmariettaga.com/";
+const kennesawMountainURL = "https://www.nps.gov/kemo/index.htm";
 
 type TravelProps = {};
 
 export const Travel = (props: TravelProps) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
-  const bookHereStyle: React.CSSProperties = {
+  const buttonStyle: React.CSSProperties = {
     height: isMobile ? "40px" : "60px",
     borderRadius: isMobile ? "20px" : "30px",
     backgroundColor: "black",
@@ -41,14 +43,14 @@ export const Travel = (props: TravelProps) => {
       The Hilton Marietta Conference Center is the 
 preferred hotel for our wedding weekend and rooms have 
 been reserved for our guests. It is the closest hotel to the venue and 
-provides easy access to all of Marietta Square’s offerings.
+provides easy access to all of Marietta Square’s offerings. We have secured a discounted rate for guests who wish to stay here.
       </div>
       <Button 
         title={`Book Here`} 
-        style={ bookHereStyle } 
+        style={ buttonStyle } 
         onClick={bookHereButtonClicked}
         onMouseEnter={(setStyleState) => {
-          setStyleState({...bookHereStyle, opacity: .5})
+          setStyleState({...buttonStyle, opacity: .5})
         }}
       />
     </div>
@@ -65,7 +67,53 @@ Hartsfield Jackson International Airport. It is a 45 minute drive
 from Marietta without traffic. Renting a car is recommended. 
       </div>     
     </div>
-  )
+  );
+
+  const parking = (
+    <div className='accomodations-container'>
+      <div className='accomodations-header' style={isMobile ? {fontSize: "30px", marginBottom: "15px"} : undefined}>
+        Parking
+      </div>
+      <div className='accomodations-text' style={isMobile ? {fontSize: "20px", padding: 0} : undefined}>
+      Our venue does not have any designated parking spots, so any public Marietta Square parking is fair game. 
+      There are a few spaces adjacent to the venue in the Marietta Station lot, but we cannot guarantee availability. 
+      Parking on the square or in the public parking decks will require a short walk. For this reason, and so you 
+      can celebrate without worry, we highly recommend taking Uber or Lyft. If you must drive, please allow ample 
+      time for parking as Saturdays on the square are very busy. Late arrivals will not be allowed to enter the 
+      venue while the ceremony is in progress. 
+      </div>     
+    </div>
+  );
+
+  const thingsToDo = (
+    <div className='accomodations-container'>
+      <div className='accomodations-header' style={isMobile ? {fontSize: "30px", marginBottom: "15px"} : undefined}>
+        Things to Do
+      </div>
+      <div className='accomodations-text' style={isMobile ? {fontSize: "20px", padding: 0} : undefined}>
+        Marietta Square has a wide variety of shopping, restaurants, and entertainment.
+      </div>     
+      <Button 
+          title="Learn More" 
+          style={buttonStyle} 
+          onClick={() => window.open(mariettaSquareURL)}
+          onMouseEnter={(setStyleState) => {
+            setStyleState({...buttonStyle, opacity: .5})
+          }}
+        />
+      <div className='accomodations-text' style={{marginTop: "40px", fontSize: isMobile ? "20px" : undefined, padding: isMobile ? "0" : undefined}}>
+        Kennesaw Mountain National Battlefield Park is a short drive away and offers history and hiking.
+      </div> 
+      <Button 
+          title="Learn More" 
+          style={buttonStyle} 
+          onClick={() => window.open(kennesawMountainURL)}
+          onMouseEnter={(setStyleState) => {
+            setStyleState({...buttonStyle, opacity: .5})
+          }}
+        />
+    </div>
+  );
 
   return (
     <div className="container">
@@ -77,8 +125,14 @@ from Marietta without traffic. Renting a car is recommended.
         <Card style={{ borderWidth: "5px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px"}}>
           { accomodations }
         </Card>
-        <Card style={{ borderWidth: "5px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px", marginBottom: "100px"}}>
+        <Card style={{ borderWidth: "5px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px"}}>
           { airTravel}
+        </Card>
+        <Card style={{ borderWidth: "5px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px"}}>
+          { parking }
+        </Card>
+        <Card style={{ borderWidth: "5px", borderStyle: "solid", borderColor: "#CB683F", marginTop: isMobile ? "30px" : "50px", marginBottom: "100px"}}>
+          { thingsToDo}
         </Card>
       </div>
     </div>

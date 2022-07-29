@@ -90,14 +90,14 @@ export const Home = (props: HomeProps) => {
           { whereComponent }
         </Card>
         <Button 
-            title={`Let's Party!`} 
-            style={letsPartyStyle} 
-            containerStyle={letsPartyContainerStyle}
-            onClick={letsPartyButtonClicked}
-            onMouseEnter={(setStyleState) => {
-              setStyleState({...letsPartyStyle, opacity: .5})
-            }}
-          />
+          title={`Let's Party!`} 
+          style={letsPartyStyle} 
+          containerStyle={letsPartyContainerStyle}
+          onClick={letsPartyButtonClicked}
+          onMouseEnter={(setStyleState) => {
+            setStyleState({...letsPartyStyle, opacity: .5})
+          }}
+        />
       </div>
     </div>
   );
