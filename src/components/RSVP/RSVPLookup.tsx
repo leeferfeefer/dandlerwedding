@@ -152,7 +152,7 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
           setStyleState({...findReservationStyle, opacity: .5})
         }}
       />
-      { errorMessage && <div>{ errorMessage }</div>}
+      { errorMessage && <div className="rsvp-lookup-error-msg">{ errorMessage }</div>}
       <Loader isLoading={isLoading}/>
     </>
   );

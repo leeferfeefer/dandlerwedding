@@ -43,3 +43,11 @@
   color: var(--dark-orange);
   border-radius: 10px;
 }
+
+.rsvp-dietary-error-msg {
+  text-align: center;
+  font-family: "Avenir";
+  color: black;
+  font-size: 15px;
+  width: 80%;
+}

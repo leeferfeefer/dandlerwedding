@@ -105,22 +105,30 @@ export const RSVPDietary = (props: RSVPDietaryProps) => {
 
   return (
     <>
-      <div className='rsvp-dietary-header'>
+      <div className='rsvp-dietary-header' style={isMobile ? {fontSize: "25px"} : undefined}>
         Any dietary restrictions?
       </div>
-      <div className='rsvp-dietary-names-container'>
-        <div className='rsvp-dietary-name-container'>
-          <div className='rsvp-dietary-name'>
+      <div className='rsvp-dietary-names-container' style={isMobile ? {marginTop: "25px", marginBottom: "25px"} : undefined}>
+        <div className='rsvp-dietary-name-container' style={isMobile ? {flexDirection: "column"} : undefined}>
+          <div className='rsvp-dietary-name' style={isMobile ? {fontSize: "20px", width: "100%", textAlign: "center"} : undefined}>
             {capitalizeFirstLetters(props.rsvpData.name)}
           </div>
-          <textarea className='rsvp-dietary-input' onChange={(e) => onInputChange(e, props.rsvpData.name)}/>  
+          <textarea 
+            className='rsvp-dietary-input' 
+            style={isMobile ? {width: "100%"} : undefined}
+            onChange={(e) => onInputChange(e, props.rsvpData.name)}
+          />  
         </div>
         {props.rsvpData.alternateNames.map(altName => (
-          <div key={altName} className='rsvp-dietary-name-container'>
-            <div className='rsvp-dietary-name'>
+          <div key={altName} className='rsvp-dietary-name-container' style={isMobile ? {flexDirection: "column"} : undefined}>
+            <div className='rsvp-dietary-name' style={isMobile ? {fontSize: "20px", width: "100%", textAlign: "center"} : undefined}>
               {capitalizeFirstLetters(altName)}
             </div>
-            <textarea className='rsvp-dietary-input' onChange={(e) => onInputChange(e, altName)}/>  
+            <textarea 
+              className='rsvp-dietary-input' 
+              style={isMobile ? {width: "100%"} : undefined}
+              onChange={(e) => onInputChange(e, altName)}
+            />  
           </div>
         ))}
       </div>
@@ -140,7 +148,7 @@ export const RSVPDietary = (props: RSVPDietaryProps) => {
           setStyleState({...buttonStyle, opacity: .5, marginTop: "20px" })
         }}
       />
-      { errorMessage && <div>{ errorMessage }</div>}
+      { errorMessage && <div className="rsvp-dietary-error-msg">{ errorMessage }</div>}
       <Loader isLoading={isLoading}/>
     </>
   );
