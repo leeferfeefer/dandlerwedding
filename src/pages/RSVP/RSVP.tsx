@@ -79,10 +79,10 @@ export const RSVP = (props: RSVPProps) => {
             )}
             { isSuccessVisible && (
               <div className='rsvp-success-container'>
-                <div className='rsvp-success-message-header'>
+                <div className='rsvp-success-message-header' style={isMobile ? {fontSize: "30px", width: "75%"} : undefined}>
                   Thank you for your RSVP!
                 </div>
-                <div className='rsvp-success-message'>
+                <div className='rsvp-success-message' style={isMobile ? {fontSize: "20px", width: "90%"} : undefined}>
                   We look forward to celebrating with you!
                 </div>
               </div>

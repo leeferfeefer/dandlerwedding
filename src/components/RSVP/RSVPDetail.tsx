@@ -36,8 +36,6 @@ const RSVPName = (props: RSVPNameProps) => {
 
   const buttonStyle: React.CSSProperties = {
     height: isMobile ? "30px" : "60px",
-    borderWidth: "5px",
-    borderStyle: "solid",
     color: "#E6C2A9",
     backgroundColor: "#CB683F",
     fontFamily: "Curvilingus",
@@ -48,6 +46,7 @@ const RSVPName = (props: RSVPNameProps) => {
     alignItems: "center",
     justifyContent: "center",
     cursor: "pointer",
+    margin: "10px"
   };
 
 
@@ -79,8 +78,8 @@ const RSVPName = (props: RSVPNameProps) => {
   };
 
   return (
-    <div className='rsvp-detail-name-container'>
-      <div className='rsvp-detail-name' style={isMobile ? {fontSize: "20px"} : undefined}>
+    <div className='rsvp-detail-name-container' style={isMobile ? {flexDirection: "column"} : undefined}>
+      <div className='rsvp-detail-name' style={isMobile ? {fontSize: "20px", width: "100%", textAlign: "center"} : undefined}>
         {capitalizeFirstLetters(props.name)}
       </div>
       <div className='rsvp-detail-button-container'>
@@ -165,7 +164,7 @@ export const RSVPDetail = (props: RSVPDetailProps) => {
           Saturday, November 5th 2022
         </div>
       </div>
-      <div className='rsvp-detail-names-container'>
+      <div className='rsvp-detail-names-container' style={isMobile ? {marginTop: "25px", marginBottom: "25px"} : undefined}>
         <RSVPName name={props.rsvpData.name} onSelected={rsvpStateSelected}/>
         { props.rsvpData.alternateNames.map(alternate => {
           return <RSVPName key={alternate} name={alternate} onSelected={rsvpStateSelected}/>;
