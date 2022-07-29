@@ -58,7 +58,7 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
   const findReservationStyle: React.CSSProperties = {
     height: isMobile ? "40px" : "80px",
     borderRadius: isMobile ? "5px" : "10px",
-    backgroundColor: "#CB683F",
+    backgroundColor: "#AE4A25",
     color: "#E6C2A9",
     fontFamily: "Curvilingus",
     fontSize: isMobile ? "15px" : "30px",
