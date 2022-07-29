@@ -20,7 +20,6 @@ export const RSVP = (props: RSVPProps) => {
   const [ isLookupVisible, setIsLookupVisible ] = React.useState(true);
   const [ isDetailVisible, setIsDetailVisible ] = React.useState(false);  
   const [ isDietaryVisible, setIsDietaryVisible ] = React.useState(false);
-  const [ reservationState, setReservationState ] = React.useState({});
   const [ rsvpData, setRsvpData ] = React.useState<RSVPData>();
 
   const RSVPOnSuccess = (rsvp: RSVPData) => {
@@ -36,8 +35,10 @@ export const RSVP = (props: RSVPProps) => {
   }; 
 
   const onDetailContinueButtonClicked = (reservationState: RSVPState) => {
-    console.log("RSVP responded data: ", reservationState);
-    setReservationState(reservationState);
+    setRsvpData({
+      ...rsvpData!,
+      rsvp: reservationState,
+    });
     setIsDetailVisible(false);
     setIsDietaryVisible(true);
   };
@@ -45,6 +46,10 @@ export const RSVP = (props: RSVPProps) => {
   const onDietaryBackButtonClicked = () => {
     setIsDetailVisible(true);
     setIsDietaryVisible(false);
+  };
+
+  const onRSVPSubmitted = () => {
+    // Show success screen
   };
 
   return (
@@ -67,9 +72,9 @@ export const RSVP = (props: RSVPProps) => {
             )}
             { rsvpData && isDietaryVisible && (
               <RSVPDietary 
+                onSuccess={onRSVPSubmitted}
                 onBackButtonClicked={onDietaryBackButtonClicked} 
                 rsvpData={rsvpData}
-                reservationState={reservationState}
               />
             )}
           </div>  

@@ -79,7 +79,7 @@ const RSVPName = (props: RSVPNameProps) => {
   };
 
   return (
-    <div className='name-container'>
+    <div className='rsvp-detail-name-container'>
       <div className='rsvp-detail-name'>{capitalizeFirstLetters(props.name)}</div>
       <div className='rsvp-detail-button-container'>
         <Button
@@ -141,11 +141,11 @@ export const RSVPDetail = (props: RSVPDetailProps) => {
     cursor: "pointer",
   };
 
-  const goBackButtonPressed = () => {
+  const goBackButtonClicked = () => {
     props.onBackButtonClicked();
   };
 
-  const continueButtonPressed = () => {
+  const continueButtonClicked = () => {
     props.onContinueButtonClicked(reservationState);
   }
 
@@ -163,7 +163,7 @@ export const RSVPDetail = (props: RSVPDetailProps) => {
           Saturday, November 5th 2022
         </div>
       </div>
-      <div className='names-container'>
+      <div className='rsvp-detail-names-container'>
         <RSVPName name={props.rsvpData.name} onSelected={rsvpStateSelected}/>
         { props.rsvpData.alternateNames.map(alternate => {
           return <RSVPName key={alternate} name={alternate} onSelected={rsvpStateSelected}/>;
@@ -174,7 +174,7 @@ export const RSVPDetail = (props: RSVPDetailProps) => {
         disabled={isContinueButtonDisabled}
         style={buttonStyle} 
         containerStyle={buttonContainerStyle}
-        onClick={continueButtonPressed}
+        onClick={continueButtonClicked}
         onMouseEnter={(setStyleState) => {
           setStyleState({...buttonStyle, opacity: .5})
         }}
@@ -183,7 +183,7 @@ export const RSVPDetail = (props: RSVPDetailProps) => {
         title='Go Back'
         style={{ ...buttonStyle, marginTop: "20px" }} 
         containerStyle={buttonContainerStyle}
-        onClick={goBackButtonPressed}
+        onClick={goBackButtonClicked}
         onMouseEnter={(setStyleState) => {
           setStyleState({...buttonStyle, opacity: .5, marginTop: "20px" })
         }}

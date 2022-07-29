@@ -8,6 +8,9 @@ export type RSVPData = {
   _id: string,
   rsvp: {
     [key: string]: boolean,
+  },
+  dietary: {
+    [key: string]: string,
   }
 };
 
@@ -15,6 +18,13 @@ export const findRSVP = async (name: string, signal?: AbortSignal): Promise<any>
   return mongoInstance.get("/endpoint/findRSVP", { 
     signal,
     params: { name: name.toLowerCase() }
+  });
+};
+
+export const updateRSVP = async (rsvpData: RSVPData, signal?: AbortSignal): Promise<any> => {
+  console.log("Attempting to send: ", rsvpData);
+  return mongoInstance.post("/endpoint/updateRSVP", rsvpData, {
+    signal,
   });
 };
 
