@@ -7,14 +7,13 @@ import { Loader } from "../../components/Loader/Loader";
 
 type RSVPLookupProps = {
   onSuccess?: (rsvp: RSVPData) => void,
-  onFailure?: () => void,
 };
 
 const ERROR_MSG: any = {
   UNKNOWN: "Oops! Something went wrong. Try again.",
   NOT_FOUND: "Your reservation was not found. Please make sure you entered your full name correctly.",
   TOO_MANY_ATTEMPTS: "It seems you are still having trouble finding your reservation. Please reach out to Dan or Chandler.",
-  ALREADY_RSVP: "You have already RSVPed. If this was a mistake, please reach out to Dan or Chandler."
+  ALREADY_RSVP: "You have already RSVPed. If this was a mistake or you would like to change your reservation, please reach out to Dan or Chandler."
 };
 
 const ERROR_MAPPING: any = {
@@ -47,7 +46,8 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
     textAlign: 'center',
     alignItems: "center",
     justifyContent: "center",
-    borderColor: "transparent"
+    borderColor: "transparent",
+    outline: "none",
   };
 
   const findReservationContainerStyle: React.CSSProperties = {
@@ -91,6 +91,12 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
     return ERROR_MAPPING[errorCode] ?? ERROR_MSG.UNKNOWN;
   };
 
+  React.useEffect(() => {
+    if (attempts >= 3) {
+      setErrorMessage(ERROR_MSG.TOO_MANY_ATTEMPTS);
+    }
+  }, [ attempts ]);
+
   const findReservation = async () => {
     setErrorMessage("");
     setIsLoading(true);
@@ -105,26 +111,21 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
       const { data } = response;
       if (data?.errorCode) {
         abortRef.current = null;
-        setAttempts(attempts+1);
-        let errorMessage;
-        if (attempts >= 3) {
-          errorMessage = ERROR_MSG.TOO_MANY_ATTEMPTS;
-        } else {
-          errorMessage = handleRSVPError(data.errorCode);
+        if (data.errorCode !== 103) { // already rsvp
+          setAttempts(attempts+1);     
         }
-        setErrorMessage(errorMessage);
-        props.onFailure && props.onFailure();        
+        setErrorMessage(handleRSVPError(data.errorCode));
       } else {  // success
         setAttempts(0); // reset attempts
         setReservationInputText("");
         props.onSuccess && props.onSuccess(data);        
       }
     } catch (error: any) {
+      console.log("RSVP ERROR", JSON.stringify(error));
+      console.log("RSVP ERROR", JSON.stringify(error?.response));
       abortRef.current = null;
       setAttempts(attempts+1);
-      console.log("RSVP ERROR", JSON.stringify(error));
       setErrorMessage(ERROR_MSG.UNKNOWN);
-      props.onFailure && props.onFailure();        
     }
     setIsLoading(false);
   };

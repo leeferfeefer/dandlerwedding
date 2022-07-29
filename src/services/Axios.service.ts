@@ -10,5 +10,7 @@ export const mongoInstance = axios.create({
   timeout: 10000,
   headers: {
     "api-key": `${ process.env.REACT_APP_API_KEY }`,
+    "Content-Type": "application/json",
+    "Accept": "application/json",
   }
 });

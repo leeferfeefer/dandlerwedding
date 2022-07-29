@@ -22,7 +22,7 @@
   width: 100%;
 }
 
-.names-container {
+.rsvp-detail-names-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +32,7 @@
   width: 100%;
 }
 
-.name-container {
+.rsvp-detail-name-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
