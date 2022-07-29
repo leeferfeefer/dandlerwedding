@@ -83,7 +83,7 @@ export const RSVP = (props: RSVPProps) => {
                   Thank you for your RSVP!
                 </div>
                 <div className='rsvp-success-message'>
-                  We are looking forward to seeing everybody!
+                  We look forward to celebrating with you!
                 </div>
               </div>
             )}
