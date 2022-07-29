@@ -39,7 +39,7 @@ const RSVPName = (props: RSVPNameProps) => {
     borderWidth: "5px",
     borderStyle: "solid",
     color: "#E6C2A9",
-    backgroundColor: "#AE4A25",
+    backgroundColor: "#CB683F",
     fontFamily: "Curvilingus",
     fontSize: isMobile ? "15px" : "30px",
     width: isMobile ? "100px" : "200px",
@@ -62,11 +62,11 @@ const RSVPName = (props: RSVPNameProps) => {
 
   React.useLayoutEffect(() => {
     if (selectedState === SelectionState.Accepted) {
-      setAcceptButtonSelectionStyle({ backgroundColor: "#CB683F" });
+      setAcceptButtonSelectionStyle({ backgroundColor: "#AE4A25" });
       setDeclineButtonSelectionStyle({ backgroundColor: "gray", opacity: .5 });
     } else if (selectedState === SelectionState.Declined) {
       setAcceptButtonSelectionStyle({ backgroundColor: "gray", opacity: .5 });
-      setDeclineButtonSelectionStyle({ backgroundColor: "#CB683F" });
+      setDeclineButtonSelectionStyle({ backgroundColor: "#AE4A25" });
     }
   }, [ selectedState ]);
 
