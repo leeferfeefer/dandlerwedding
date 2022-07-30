@@ -35,6 +35,7 @@ export const NavBar = (props: NavBarProps) => {
             style={hamburgerMenuStyle}
             onClick={props.onHamburgerClick} 
             imgSrc={HamburgerSrc}
+            imgStyle={{width: "100%"}}
           />
         </div>
       ) : (

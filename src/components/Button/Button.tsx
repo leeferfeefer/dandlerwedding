@@ -8,10 +8,11 @@ type ButtonProps = {
   componentRef?: any;
   style?: React.CSSProperties;
   imgSrc?: any;
+  imgStyle?: React.CSSProperties;
 };
 
 export const Button = (props: ButtonProps) => {
-  const { onClick, style, title, imgSrc, componentRef } = props;
+  const { onClick, style, title, imgSrc, componentRef, imgStyle } = props;
     
   return (
     <div 
@@ -20,7 +21,7 @@ export const Button = (props: ButtonProps) => {
       onClick={onClick} 
       style={style}>
         { title }
-        { imgSrc && <img src={imgSrc} alt="button-img"/> }
+        { imgSrc && <img style={imgStyle} src={imgSrc} alt="button-img"/> }
     </div>
   );
 };
