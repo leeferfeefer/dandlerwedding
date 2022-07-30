@@ -16,6 +16,7 @@ export const navLinks = [
   { name: "Travel", to: "/travel" },
   { name: "Registry", to: "/registry" },
   { name: "Gallery", to: "/gallery" },
+  { name: "FAQs", to: "/faqs"},
 ];
 
 export const NavBar = (props: NavBarProps) => {
