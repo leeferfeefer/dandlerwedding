@@ -101,7 +101,7 @@ from Marietta without traffic. Renting a car is recommended.
             setStyleState({...buttonStyle, opacity: .5})
           }}
         />
-      <div className='accomodations-text' style={{marginTop: "40px", fontSize: isMobile ? "20px" : undefined, padding: isMobile ? "0" : undefined}}>
+      <div className='accomodations-text' style={{marginTop: "40px", width: "75%", fontSize: isMobile ? "20px" : undefined, padding: isMobile ? "0" : undefined}}>
         Kennesaw Mountain National Battlefield Park is a short drive away and offers history and hiking.
       </div> 
       <Button 
