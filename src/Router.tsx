@@ -12,10 +12,8 @@ import { Travel } from './pages/Travel/Travel';
 import { Gallery } from './pages/Gallery/Gallery';
 import { Test } from './pages/Test/Test';
 import { NavBar } from "./components/NavBar/NavBar";
+import { HamburgerMenu } from "./components/HamburgerMenu/HamburgerMenu";
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-
-// import Sidebar from "./components/Sidebar/Sidebar";
-// import Navbar from "./components/Navbar/Navbar";
 
 export const Router = () => {
   const [ isopen, setisopen ] = React.useState(false);
@@ -27,10 +25,7 @@ export const Router = () => {
   return (
     <BrowserRouter>
       <NavBar onHamburgerClick={toggle}/>
-
-      {/* <NewNavBar toggle={toggle} /> */}
-      {/* <Sidebar isopen={isopen} toggle={toggle} /> */}
-
+      <HamburgerMenu isOpen={isopen} toggle={toggle} />
       <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
