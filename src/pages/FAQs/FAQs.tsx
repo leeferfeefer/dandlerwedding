@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../App.css';
 import './FAQs.css';
-import { NavBar } from "../../components/NavBar/NavBar";
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from "react-router-dom";
 
@@ -70,7 +69,6 @@ export const FAQs = (props: FAQsProps) => {
 
   return (
     <div className="container">
-      <NavBar/>
       <div className='faqs-container' style={{ marginTop: isMobile ? "44px" : undefined}}>
         <div className='faqs-header' style={ isMobile ? { fontSize: "75px", marginTop: "40px"} : undefined}>
           Frequently Asked Questions
