@@ -71,12 +71,12 @@ from Marietta without traffic. Renting a car is recommended.
         Parking
       </div>
       <div className='accomodations-text' style={isMobile ? {fontSize: "20px", padding: 0} : undefined}>
-      Our venue does not have any designated parking spots, so any public Marietta Square parking is fair game. 
-      There are a few spaces adjacent to the venue in the Marietta Station lot, but we cannot guarantee availability. 
-      Parking on the square or in the public parking decks will require a short walk. For this reason, and so you 
-      can celebrate without worry, we highly recommend taking Uber or Lyft. If you must drive, please allow ample 
-      time for parking as Saturdays on the square are very busy. Late arrivals will not be allowed to enter the 
-      venue while the ceremony is in progress. 
+        Our venue is on the historic Marietta Square and does not have designated parking. 
+        We highly recommend using Uber or Lyft so you can celebrate safely with us! 
+        If you choose to drive, please arrive with ample time to find a parking spot as Saturdays on the Square are busy. 
+        Most public spaces are free, and the courthouse parking decks are $5 and a short walk to the venue. 
+        A shuttle service will be provided to guests staying at the Hilton Marietta beginning at 4:00pm. 
+        Late arrivals will not be allowed to enter the venue after the ceremony begins. 
       </div>     
     </div>
   );
