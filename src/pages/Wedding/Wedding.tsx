@@ -24,7 +24,7 @@ export const Wedding = (props: WeddingProps) => {
         </div>
         <Card style={{marginTop: isMobile ? "25px" : "50px"}}>
           <div className='wedding-card-container'>
-            <div className='wedding-date-primary' style={{marginTop: "20px"}}>
+            <div className='wedding-date-primary'>
               November 5, 2022
             </div>
             <div className='wedding-date-secondary'>
