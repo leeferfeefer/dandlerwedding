@@ -1,7 +1,5 @@
 .gallery-container {
   background-color: var(--tan);
-  height: 100%;
-  width: 100%;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -14,16 +12,6 @@
   font-family: 'Curvilingus';
   font-size: 100px;
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   text-align: center;
-}
-
-.photo-gallery-container img {
-  border-radius: 20px;
-}
-
-@media all and (max-width: 768px) {
-  .photo-gallery-container img {
-    border-radius: 10px;
-  }
 }

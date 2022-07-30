@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import Gallery from "react-photo-gallery";
 import { GalleryPhotos, shuffle } from "../../Globals";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import { Card } from "../../components/Card/Card";
 
 type PhotoGalleryProps = {}
 export const PhotoGallery = (props: PhotoGalleryProps) => {
@@ -34,7 +35,7 @@ export const PhotoGallery = (props: PhotoGalleryProps) => {
         margin={5} 
         columns={5} 
         onClick={openLightbox}
-      />
+      />      
       <ModalGateway>
         {isViewerOpen ? (
           <Modal onClose={closeLightbox}>
