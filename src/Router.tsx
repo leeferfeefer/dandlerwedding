@@ -12,6 +12,7 @@ import { Travel } from './pages/Travel/Travel';
 import { Gallery } from './pages/Gallery/Gallery';
 import { NavBar } from "./components/NavBar/NavBar";
 import { HamburgerMenu } from "./components/HamburgerMenu/HamburgerMenu";
+import { FAQs } from './pages/FAQs/FAQs';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 export const Router = () => {
@@ -33,6 +34,7 @@ export const Router = () => {
         <Route path="travel" element={<Travel />} />
         <Route path="registry" element={<Registry />} />
         <Route path="gallery" element={<Gallery />} />
+        <Route path="faqs" element={<FAQs />} />
       </Routes>
     </BrowserRouter>
   );
