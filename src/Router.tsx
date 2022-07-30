@@ -14,8 +14,11 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { HamburgerMenu } from "./components/HamburgerMenu/HamburgerMenu";
 import { FAQs } from './pages/FAQs/FAQs';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import { useMediaQuery } from 'react-responsive';
 
 export const Router = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   const [ isopen, setisopen ] = React.useState(false);
 
   const toggle = () => {
@@ -25,7 +28,7 @@ export const Router = () => {
   return (
     <BrowserRouter>
       <NavBar onHamburgerClick={toggle}/>
-      <HamburgerMenu isOpen={isopen} toggle={toggle} />
+      { isMobile && <HamburgerMenu isOpen={isopen} toggle={toggle} />}
       <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />

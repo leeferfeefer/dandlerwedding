@@ -1,10 +1,17 @@
 .gallery-container {
   background-color: var(--tan);
-  height: 100%;
-  width: 100%;
   flex-direction: column;
   display: flex;
   align-items: center;
   flex: 1;
   margin-top: 64px; /* space for navbar*/
+}
+
+.gallery-header {
+  color: var(--light-orange);
+  font-family: 'Curvilingus';
+  font-size: 100px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  text-align: center;
 }
