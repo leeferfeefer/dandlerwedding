@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../App.css';
 import './Registry.css';
-import { NavBar } from "../../components/NavBar/NavBar";
 import CrateBarrelLogo from "../../images/Registry/CrateBarrel.png";
 import WilliamsSonomaLogo from "../../images/Registry/WilliamsSonoma.png";
 import WestElmLogo from "../../images/Registry/WestElm.png";
@@ -51,7 +50,6 @@ export const Registry = (props: RegistryProps) => {
 
   return (
     <div className="container">
-      <NavBar/>
       <div className="registry-container" style={{ marginTop: isMobile ? "44px" : undefined}}> 
         <div className="registry-header" style={ isMobile ? { fontSize: "75px", marginTop: "40px"} : undefined}>
           Registry

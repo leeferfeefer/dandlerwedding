@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../App.css';
 import "./Home.css";
-import { NavBar } from "../../components/NavBar/NavBar";
 import LogoSrc from "../../images/WeddingLogo.png";
 import { Card } from "../../components/Card/Card";
 import WhenImageSrc from "../../images/WhenImage.png";
@@ -80,7 +79,6 @@ export const Home = (props: HomeProps) => {
 
   return (
     <div className="container">
-      <NavBar/>
       <div className="home-container" style={{ marginTop: isMobile ? "44px" : undefined}}> 
         <img className="logo-img" src={LogoSrc} alt="Wedding Logo" style={{marginTop: "50px", maxWidth: isMobile ? "50%" : undefined }}/>
         <Card style={{marginTop: isMobile ? "25px" : "50px"}}>

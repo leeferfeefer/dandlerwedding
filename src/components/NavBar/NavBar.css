@@ -40,7 +40,9 @@
   color: white;
 }
 
-.logo-img {
-  max-width: 25%;
-  height: auto;
+.hamburger-menu-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+    
 }

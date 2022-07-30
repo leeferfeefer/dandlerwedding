@@ -49,3 +49,8 @@ Pink: e4b2bc
   display: flex;
   flex-direction: column;
 }
+
+.logo-img {
+  max-width: 25%;
+  height: auto;
+}
