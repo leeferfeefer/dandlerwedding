@@ -40,7 +40,8 @@
   color: white;
 }
 
-.logo-img {
-  max-width: 25%;
-  height: auto;
+.hamburger-menu-image-container {
+  display: flex;
+  width: 44px;
+  height: 100%;  
 }

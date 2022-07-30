@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../App.css';
 import './Travel.css';
-import { NavBar } from "../../components/NavBar/NavBar";
 import { Card } from "../../components/Card/Card";
 import { Button } from "../../components/Button/Button";
 import { useMediaQuery } from 'react-responsive';
@@ -108,7 +107,6 @@ from Marietta without traffic. Renting a car is recommended.
 
   return (
     <div className="container">
-      <NavBar/>
       <div className='travel-container' style={{ marginTop: isMobile ? "44px" : undefined}}>
         <div className='travel-header' style={ isMobile ? { fontSize: "75px", marginTop: "40px"} : undefined}>
           Travel
