@@ -8,3 +8,22 @@
   flex: 1;
   margin-top: 64px; /* space for navbar*/
 }
+
+.gallery-header {
+  color: var(--light-orange);
+  font-family: 'Curvilingus';
+  font-size: 100px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.photo-gallery-container img {
+  border-radius: 20px;
+}
+
+@media all and (max-width: 768px) {
+  .photo-gallery-container img {
+    border-radius: 10px;
+  }
+}

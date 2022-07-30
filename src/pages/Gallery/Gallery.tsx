@@ -15,6 +15,9 @@ export const Gallery = (props: GalleryProps) => {
   return (
     <div className="container">
       <div className='gallery-container' style={{ marginTop: isMobile ? "44px" : undefined}}>
+        <div className='gallery-header' style={ isMobile ? { fontSize: "75px", marginTop: "40px", marginBottom: "40px"} : undefined}>
+          Gallery
+        </div>
         <PhotoGallery/>
       </div>
     </div>

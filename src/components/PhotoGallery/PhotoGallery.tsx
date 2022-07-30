@@ -27,8 +27,14 @@ export const PhotoGallery = (props: PhotoGalleryProps) => {
   }, []);
 
   return (
-    <div style={{height: "100%", width: "100%", position: "relative", margin: "5px"}}>
-      <Gallery photos={photos} direction={"column"} margin={5} columns={5} onClick={openLightbox}/>
+    <div className='photo-gallery-container' style={{height: "100%", width: "100%", position: "relative", margin: "5px"}}>
+      <Gallery 
+        photos={photos} 
+        direction={"column"} 
+        margin={5} 
+        columns={5} 
+        onClick={openLightbox}
+      />
       <ModalGateway>
         {isViewerOpen ? (
           <Modal onClose={closeLightbox}>
