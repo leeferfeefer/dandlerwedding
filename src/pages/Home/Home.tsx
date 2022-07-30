@@ -96,7 +96,6 @@ export const Home = (props: HomeProps) => {
             onClick={letsPartyButtonClicked}
           />
         </div>
-        
       </div>
     </div>
   );
