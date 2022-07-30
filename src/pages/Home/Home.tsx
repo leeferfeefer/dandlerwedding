@@ -89,15 +89,13 @@ export const Home = (props: HomeProps) => {
         <Card style={{marginTop: isMobile ? "25px" : "50px"}}>
           { whereComponent }
         </Card>
-        <Button 
-          title={`Let's Party!`} 
-          style={letsPartyStyle} 
-          containerStyle={letsPartyContainerStyle}
-          onClick={letsPartyButtonClicked}
-          onMouseEnter={(setStyleState) => {
-            setStyleState({...letsPartyStyle, opacity: .5})
-          }}
-        />
+        <div style={letsPartyContainerStyle}>
+          <Button 
+            title={`Let's Party!`} 
+            style={letsPartyStyle} 
+            onClick={letsPartyButtonClicked}
+          />
+        </div>
       </div>
     </div>
   );

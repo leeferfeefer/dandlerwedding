@@ -7,40 +7,20 @@ type ButtonProps = {
   onClick: () => void;
   componentRef?: any;
   style?: React.CSSProperties;
-  containerStyle?: React.CSSProperties;
-  onMouseEnter?: (setStyleCallback: any) => void;
-  onMouseLeave?: () => void;
-  buttonClassName?: string;
   imgSrc?: any;
 };
 
 export const Button = (props: ButtonProps) => {
-  const { onClick, style, title, containerStyle, imgSrc,
-    componentRef, onMouseEnter, onMouseLeave, buttonClassName } = props;
-  
-  const [ styleState, setStyleState ] = React.useState<React.CSSProperties>(style ?? {});
-  
-  const _onMouseEnter = () => {
-    onMouseEnter && onMouseEnter(setStyleState);
-  };
-
-  const _onMouseLeave = () => {
-    onMouseLeave && onMouseLeave();
-    setStyleState(style ?? {});
-  };
-
+  const { onClick, style, title, imgSrc, componentRef } = props;
+    
   return (
-    <div style={containerStyle}>
-      <div 
-        className={buttonClassName}
-        ref={componentRef} 
-        onMouseEnter={_onMouseEnter}
-        onMouseLeave={_onMouseLeave}        
-        onClick={onClick} 
-        style={styleState}>
-          { title }
-          { imgSrc && <img src={imgSrc} alt="button-img"/> }
-      </div>
+    <div 
+      className='button'
+      ref={componentRef}    
+      onClick={onClick} 
+      style={style}>
+        { title }
+        { imgSrc && <img src={imgSrc} alt="button-img"/> }
     </div>
   );
 };

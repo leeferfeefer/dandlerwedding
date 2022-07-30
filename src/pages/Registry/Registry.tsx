@@ -22,8 +22,6 @@ type RegistryProps = {
 export const Registry = (props: RegistryProps) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
-  const buttonContainer: React.CSSProperties = {};
-
   const buttonStyle: React.CSSProperties = {
     height: isMobile ? "40px" : "80px",
     borderRadius: isMobile ? "20px" : "40px",
@@ -72,10 +70,6 @@ export const Registry = (props: RegistryProps) => {
                 style={buttonStyle}
                 title="Go To Registry"
                 onClick={crateBarrelButtonClicked}    
-                containerStyle={buttonContainer}
-                onMouseEnter={(setStyleState) => {
-                  setStyleState({...buttonStyle, opacity: .5})
-                }}
               />
             </div>            
           </div>
@@ -98,10 +92,6 @@ export const Registry = (props: RegistryProps) => {
                 style={buttonStyle}
                 title="Go To Registry"
                 onClick={williamswestButtonClicked}    
-                containerStyle={buttonContainer}
-                onMouseEnter={(setStyleState) => {
-                  setStyleState({...buttonStyle, opacity: .5})
-                }}
               />
             </div>
           </div>
@@ -120,10 +110,6 @@ export const Registry = (props: RegistryProps) => {
                 style={buttonStyle}
                 title="Go To Registry"
                 onClick={amazonButtonClicked}    
-                containerStyle={buttonContainer}
-                onMouseEnter={(setStyleState) => {
-                  setStyleState({...buttonStyle, opacity: .5})
-                }}
               />
             </div>
           </div>
