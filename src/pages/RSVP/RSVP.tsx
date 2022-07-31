@@ -8,9 +8,10 @@ import { RSVPLookup } from '../../components/RSVP/RSVPLookup';
 import { RSVPData } from '../../services/RSVP.service';
 import { RSVPDetail, RSVPState } from "../../components/RSVP/RSVPDetail";
 import { RSVPDietary } from '../../components/RSVP/RSVPDietary';
+import { ComingSoon } from "../ComingSoon/ComingSoon";
 
 type RSVPProps = {
-
+  isEnabled: boolean;
 };
 
 export const RSVP = (props: RSVPProps) => {
@@ -55,6 +56,8 @@ export const RSVP = (props: RSVPProps) => {
 
   return (
     <div className="container" style={{height: "100vh"}}>
+      { !props.isEnabled ? <ComingSoon/> :
+
       <div className="rsvp-container" style={{ marginTop: isMobile ? "44px" : undefined}}> 
         <img className="logo-img" src={LogoSrc} alt="Wedding Logo" style={{marginTop: "50px", maxWidth: isMobile ? "50%" : undefined }}/>
         <Card style={{
@@ -89,7 +92,7 @@ export const RSVP = (props: RSVPProps) => {
             )}
           </div>  
         </Card>
-      </div>
+      </div> }
     </div>
   );
 }
