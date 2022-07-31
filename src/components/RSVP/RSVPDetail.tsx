@@ -32,6 +32,8 @@ const RSVPName = (props: RSVPNameProps) => {
   const [ selectedState, setSelectedState] = React.useState<SelectionState>(SelectionState.None);
   const [ acceptButtonSelectionStyle, setAcceptButtonSelectionStyle ] = React.useState({});
   const [ declineButtonSelectionStyle, setDeclineButtonSelectionStyle ] = React.useState({});
+  const [ acceptButtonTitleState, setAcceptButtonTitleState ] = React.useState("Accept");
+  const [ declineButtonTitleState, setDeclineButtonTitleState ] = React.useState("Decline");
   const isMounted = React.useRef(false);
 
   const buttonStyle: React.CSSProperties = {
@@ -63,9 +65,13 @@ const RSVPName = (props: RSVPNameProps) => {
     if (selectedState === SelectionState.Accepted) {
       setAcceptButtonSelectionStyle({ backgroundColor: "#AE4A25" });
       setDeclineButtonSelectionStyle({ backgroundColor: "gray" });
+      setAcceptButtonTitleState("Accepted");
+      setDeclineButtonTitleState("Decline");
     } else if (selectedState === SelectionState.Declined) {
       setAcceptButtonSelectionStyle({ backgroundColor: "gray" });
       setDeclineButtonSelectionStyle({ backgroundColor: "#AE4A25" });
+      setDeclineButtonTitleState("Declined");
+      setAcceptButtonTitleState("Accept");
     }
   }, [ selectedState ]);
 
@@ -85,12 +91,12 @@ const RSVPName = (props: RSVPNameProps) => {
       <div className='rsvp-detail-button-container'>
         <Button
           style={{ ...buttonStyle, ...acceptButtonSelectionStyle }}
-          title='Accept'
+          title={acceptButtonTitleState}
           onClick={acceptButtonClicked}
         />
         <Button
           style={{ ...buttonStyle, ...declineButtonSelectionStyle }}
-          title='Decline'
+          title={declineButtonTitleState}
           onClick={declineButtonClicked}          
         />
       </div>

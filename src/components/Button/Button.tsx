@@ -18,6 +18,7 @@ const RealButton = (props: ButtonProps) => {
     disabled } = props;
 
   const [ styleState, setStyleState ] = React.useState((style as any) ?? {});
+  const [ titleState, setTitleState ] = React.useState(title);
 
   React.useEffect(() => {
     if (disabled) {
@@ -27,6 +28,10 @@ const RealButton = (props: ButtonProps) => {
     }
   }, [disabled, style]);
 
+  React.useEffect(() => {
+    setTitleState(title);
+  }, [title]);
+
     
   return (
     <div 
@@ -34,7 +39,7 @@ const RealButton = (props: ButtonProps) => {
       ref={componentRef}    
       onClick={disabled ? () => {} : onClick} 
       style={styleState}>
-        { title }
+        { titleState }
         { imgSrc && <img style={imgStyle} src={imgSrc} alt="button-img"/> }
     </div>
   );
