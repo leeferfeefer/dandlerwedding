@@ -1,14 +1,6 @@
-/* .container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-} */
 
 .home-container {
   background-color: var(--dark-orange);
-  height: 100%;
-  width: 100%;
   flex-direction: column;
   display: flex;
   align-items: center;

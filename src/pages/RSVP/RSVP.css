@@ -1,0 +1,40 @@
+.rsvp-container {
+  background-color: var(--dark-orange);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: 64px; /* space for navbar*/
+}
+
+.rsvp-inner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvp-success-container {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.rsvp-success-message-header {
+  font-family: "Curvilingus";
+  font-size: 60px;
+  color: var(--dark-orange);
+  text-align: center;
+  width: 100%;
+}
+
+.rsvp-success-message {
+  font-family: "Avenir";
+  font-size: 40px;
+  color: var(--dark-orange);
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}

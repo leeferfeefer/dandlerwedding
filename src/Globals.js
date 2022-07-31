@@ -18,6 +18,14 @@ export const shuffle = (array) => {
   return array;
 }
 
+export const capitalizeFirstLetters = (str) => {
+  const strArr = str.split(" ");
+  for (let i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].charAt(0).toUpperCase() + strArr[i].slice(1);
+  }
+  return strArr.join(" ");
+};
+
 export const GalleryPhotos = [
   {
       "src": GalleryImages.image0,

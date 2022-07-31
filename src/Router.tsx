@@ -33,11 +33,12 @@ export const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="wedding" element={<Wedding />} />
-        <Route path="rsvp" element={<RSVP />} />
+        <Route path="rsvp" element={<RSVP isEnabled={false}/>} />
         <Route path="travel" element={<Travel />} />
         <Route path="registry" element={<Registry />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="faqs" element={<FAQs />} />
+        <Route path="test" element={<RSVP isEnabled={true}/>} />
       </Routes>
     </BrowserRouter>
   );

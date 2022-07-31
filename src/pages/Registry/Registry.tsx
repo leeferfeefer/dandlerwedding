@@ -55,7 +55,7 @@ export const Registry = (props: RegistryProps) => {
           Registry
         </div>
         <div className="registry-secondary-header" style={ isMobile ? { fontSize: "25px", marginTop: "25px", marginBottom: "25px"} : undefined}>
-          The couple is registered at the following stores:
+          We are registered at the following stores:
         </div>
 
         <div className="registry-places" style={{marginTop: isMobile ? "20px" : "50px", marginBottom: "100px"}}>

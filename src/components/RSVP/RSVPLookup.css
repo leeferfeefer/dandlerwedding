@@ -1,0 +1,15 @@
+.rsvp-text {
+  font-family: "Avenir";
+  color: var(--dark-orange);
+  font-size: 20px;
+  text-align: center;
+  width: 60%;
+}
+
+.rsvp-lookup-error-msg {
+  text-align: center;
+  font-family: "Avenir";
+  color: black;
+  font-size: 15px;
+  width: 80%;
+}
