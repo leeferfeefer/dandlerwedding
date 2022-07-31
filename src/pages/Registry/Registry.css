@@ -5,8 +5,6 @@
   align-items: center;
   /* justify-content: center; */
   background-color: var(--pink);
-  height: 100%;
-  width: 100%;
   flex-direction: column;
   flex: 1;
   margin-top: 64px; /* space for navbar*/
