@@ -48,12 +48,11 @@
   font-family: 'Avenir';
   font-size: 40px;
   text-align: center;
-  margin: 25px;
 }
 
 @media all and (max-width: 768px) {
   .wedding-date-primary {
-    font-size: 40px;
+    font-size: 35px;
   }
   .wedding-date-secondary {
     font-size: 30px;
