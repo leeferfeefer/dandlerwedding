@@ -62,9 +62,9 @@ const RSVPName = (props: RSVPNameProps) => {
   React.useLayoutEffect(() => {
     if (selectedState === SelectionState.Accepted) {
       setAcceptButtonSelectionStyle({ backgroundColor: "#AE4A25" });
-      setDeclineButtonSelectionStyle({ backgroundColor: "gray", opacity: .5 });
+      setDeclineButtonSelectionStyle({ backgroundColor: "gray" });
     } else if (selectedState === SelectionState.Declined) {
-      setAcceptButtonSelectionStyle({ backgroundColor: "gray", opacity: .5 });
+      setAcceptButtonSelectionStyle({ backgroundColor: "gray" });
       setDeclineButtonSelectionStyle({ backgroundColor: "#AE4A25" });
     }
   }, [ selectedState ]);
