@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const apiInstance = axios.create({
-  baseURL: 'http://localhost:3001/api/',
+  baseURL: 'https://dandlerwedding-api.herokuapp.com/api/',
   timeout: 10000,
 });
 
