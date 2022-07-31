@@ -1,4 +1,4 @@
-import { mongoInstance } from "./Axios.service";
+import { apiInstance } from "./Axios.service";
 
 export type RSVPData = {
   alternateNames: string[],
@@ -15,15 +15,14 @@ export type RSVPData = {
 };
 
 export const findRSVP = async (name: string, signal?: AbortSignal): Promise<any> => {
-  return mongoInstance.get("/endpoint/findRSVP", { 
+  return apiInstance.get("/rsvpLookup", { 
     signal,
     params: { name: name.toLowerCase() }
   });
 };
 
 export const updateRSVP = async (rsvpData: RSVPData, signal?: AbortSignal): Promise<any> => {
-  console.log("Attempting to send: ", rsvpData);
-  return mongoInstance.post("/endpoint/updateRSVP", rsvpData, {
+  return apiInstance.post("/rsvpUpdate", rsvpData, {
     signal,
   });
 };
