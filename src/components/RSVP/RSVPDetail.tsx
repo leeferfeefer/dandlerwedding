@@ -87,17 +87,11 @@ const RSVPName = (props: RSVPNameProps) => {
           style={{ ...buttonStyle, ...acceptButtonSelectionStyle }}
           title='Accept'
           onClick={acceptButtonClicked}
-          onMouseEnter={(setStyleState) => {
-            setStyleState({ ...buttonStyle, ...acceptButtonSelectionStyle, opacity: .5})
-          }}
         />
         <Button
           style={{ ...buttonStyle, ...declineButtonSelectionStyle }}
           title='Decline'
-          onClick={declineButtonClicked}
-          onMouseEnter={(setStyleState) => {
-            setStyleState({ ...buttonStyle, ...declineButtonSelectionStyle, opacity: .5})
-          }}
+          onClick={declineButtonClicked}          
         />
       </div>
     </div>
@@ -121,11 +115,6 @@ export const RSVPDetail = (props: RSVPDetailProps) => {
       isMounted.current = true;
     }
   }, [ Object.keys(reservationState).length ]);
-
-  const buttonContainerStyle: React.CSSProperties = {
-    // marginTop: isMobile ? "50px" : "100px",
-    // marginBottom: isMobile ? "150px" : "300px",
-  };
 
   const buttonStyle: React.CSSProperties = {
     height: isMobile ? "40px" : "80px",
@@ -174,20 +163,12 @@ export const RSVPDetail = (props: RSVPDetailProps) => {
         title='Continue' 
         disabled={isContinueButtonDisabled}
         style={buttonStyle} 
-        containerStyle={buttonContainerStyle}
         onClick={continueButtonClicked}
-        onMouseEnter={(setStyleState) => {
-          setStyleState({...buttonStyle, opacity: .5})
-        }}
       />
       <Button 
         title='Go Back'
         style={{ ...buttonStyle, marginTop: "20px", backgroundColor: "#CB683F" }} 
-        containerStyle={buttonContainerStyle}
         onClick={goBackButtonClicked}
-        onMouseEnter={(setStyleState) => {
-          setStyleState({...buttonStyle, opacity: .5, marginTop: "20px" })
-        }}
       />
     </>
   );

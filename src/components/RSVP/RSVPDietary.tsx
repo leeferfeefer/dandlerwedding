@@ -136,17 +136,11 @@ export const RSVPDietary = (props: RSVPDietaryProps) => {
         title='Submit' 
         style={buttonStyle} 
         onClick={submitButtonClicked}
-        onMouseEnter={(setStyleState) => {
-          setStyleState({...buttonStyle, opacity: .5})
-        }}
       />
       <Button 
         title='Go Back'
         style={{ ...buttonStyle, marginTop: "20px", backgroundColor: "#CB683F" }} 
         onClick={goBackButtonClicked}
-        onMouseEnter={(setStyleState) => {
-          setStyleState({...buttonStyle, opacity: .5, marginTop: "20px" })
-        }}
       />
       { errorMessage && <div className="rsvp-dietary-error-msg">{ errorMessage }</div>}
       <Loader isLoading={isLoading}/>

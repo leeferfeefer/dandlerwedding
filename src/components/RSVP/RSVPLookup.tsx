@@ -50,11 +50,6 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
     outline: "none",
   };
 
-  const findReservationContainerStyle: React.CSSProperties = {
-    // marginTop: isMobile ? "50px" : "100px",
-    // marginBottom: isMobile ? "150px" : "300px",
-  };
-
   const findReservationStyle: React.CSSProperties = {
     height: isMobile ? "40px" : "80px",
     borderRadius: isMobile ? "5px" : "10px",
@@ -146,11 +141,7 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
         disabled={isFindReservationDisabled}
         title={`Find your reservation`} 
         style={findReservationStyle} 
-        containerStyle={findReservationContainerStyle}
         onClick={findReservationClicked}
-        onMouseEnter={(setStyleState) => {
-          setStyleState({...findReservationStyle, opacity: .5})
-        }}
       />
       { errorMessage && <div className="rsvp-lookup-error-msg">{ errorMessage }</div>}
       <Loader isLoading={isLoading}/>
