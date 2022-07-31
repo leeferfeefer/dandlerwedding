@@ -8,11 +8,8 @@ import { RSVPLookup } from '../../components/RSVP/RSVPLookup';
 import { RSVPData } from '../../services/RSVP.service';
 import { RSVPDetail, RSVPState } from "../../components/RSVP/RSVPDetail";
 import { RSVPDietary } from '../../components/RSVP/RSVPDietary';
-import { ComingSoon } from "../ComingSoon/ComingSoon";
 
-type RSVPProps = {
-  isEnabled: boolean;
-};
+type RSVPProps = {};
 
 export const RSVP = (props: RSVPProps) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -24,7 +21,6 @@ export const RSVP = (props: RSVPProps) => {
   const [ rsvpData, setRsvpData ] = React.useState<RSVPData>();
 
   const RSVPOnSuccess = (rsvp: RSVPData) => {
-    console.log("RETRIEVED DATA: ", rsvp);
     setRsvpData(rsvp);
     setIsLookupVisible(false);
     setIsDetailVisible(true);
@@ -56,8 +52,6 @@ export const RSVP = (props: RSVPProps) => {
 
   return (
     <div className="container" style={{height: "100vh"}}>
-      { !props.isEnabled ? <ComingSoon/> :
-
       <div className="rsvp-container" style={{ marginTop: isMobile ? "44px" : undefined}}> 
         <img className="logo-img" src={LogoSrc} alt="Wedding Logo" style={{marginTop: "50px", maxWidth: isMobile ? "50%" : undefined }}/>
         <Card style={{
@@ -92,7 +86,7 @@ export const RSVP = (props: RSVPProps) => {
             )}
           </div>  
         </Card>
-      </div> }
+      </div>
     </div>
   );
 }
