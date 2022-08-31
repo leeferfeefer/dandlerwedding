@@ -36,8 +36,6 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
   const inputStyle: React.CSSProperties = {
     height: isMobile ? "20px" : "40px",
     borderRadius: isMobile ? "5px" : "10px",
-    backgroundColor: "#E4B2BC",
-    // color: "#E6C2A9",
     fontFamily: "Curvilingus",
     fontSize: isMobile ? "15px" : "30px",
     width: isMobile ? "250px" : "500px",
