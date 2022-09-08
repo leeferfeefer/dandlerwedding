@@ -90,6 +90,14 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
     }
   }, [ attempts ]);
 
+  /* This will remove all spaces before and after name. 
+   * It will also remove any extra between first and last name and properly format it as First + " " + Last
+   */
+  const refactorName = () => {
+    const nameArr = reservationInputText.trim().split(" ");
+    return nameArr[0] + " " + nameArr[nameArr.length - 1];
+  };
+
   const findReservation = async () => {
     setErrorMessage("");
     setIsLoading(true);
@@ -100,7 +108,7 @@ export const RSVPLookup = (props: RSVPLookupProps) => {
 
     try {
       abortRef.current = new AbortController();
-      const response = await findRSVP(reservationInputText, abortRef.current.signal);
+      const response = await findRSVP(refactorName(), abortRef.current.signal);
       const { data } = response;
       setIsLoading(false);
       if (data?.errorCode) {
