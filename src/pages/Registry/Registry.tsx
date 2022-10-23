@@ -9,6 +9,7 @@ import { Button } from '../../components/Button/Button';
 import { useMediaQuery } from 'react-responsive';
 
 const RegistryURLs = {
+  honeyfund: "https://www.honeyfund.com/wedding/fincher-ford-11-05-2022",
   crateAndBarrel: "https://www.crateandbarrel.com/gift-registry/chandler-ford-and-dan-fincher/r6548024",
   williamsWest: "https://www.westelm.com/registry/bhd5dhsrk6/registry-list.html",
   amazon: "https://www.amazon.com/wedding/dan-fincher-chandler-ford--november-2022/registry/3EGR1UEUYV5Q5"
@@ -36,6 +37,10 @@ export const Registry = (props: RegistryProps) => {
     cursor: "pointer",
   };
 
+  const honeyfundButtonClicked = () => {
+    window.open(RegistryURLs.honeyfund);
+  }; 
+
   const crateBarrelButtonClicked = () => {
     window.open(RegistryURLs.crateAndBarrel);
   };
@@ -54,11 +59,30 @@ export const Registry = (props: RegistryProps) => {
         <div className="registry-header" style={ isMobile ? { fontSize: "75px", marginTop: "40px"} : undefined}>
           Registry
         </div>
-        <div className="registry-secondary-header" style={ isMobile ? { fontSize: "25px", marginTop: "25px", marginBottom: "25px"} : undefined}>
-          We are registered at the following stores:
-        </div>
+
 
         <div className="registry-places" style={{marginTop: isMobile ? "20px" : "50px", marginBottom: "100px"}}>
+
+        <hr className='divider' style={isMobile ? 
+            { marginTop: "30px", marginBottom: "30px" } : 
+            { marginTop: "60px", marginBottom: "60px"}
+          }/>
+
+          <div className='registry-place-container'>
+            <div className='button-container'>
+              <Button 
+                style={{...buttonStyle, width: isMobile ? "250px" : "500px"}}
+                title="Contribute to our honeymoon!"
+                onClick={honeyfundButtonClicked}    
+              />
+            </div>            
+          </div>
+
+          <hr className='divider' style={isMobile ? 
+            { marginTop: "30px", marginBottom: "30px" } : 
+            { marginTop: "60px", marginBottom: "60px"}
+          }/>
+
           <div className='registry-place-container'>
             <div className="registry-place-image-container">
               <img src={CrateBarrelLogo} width="100%" alt="CrateBarrel Logo" />
